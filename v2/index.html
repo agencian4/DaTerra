@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<style>
+@font-face{font-family:"Libre Caslon Display";font-weight:400;font-display:swap;src:url(fonts/libre-caslon-display-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Libre Caslon Text";font-weight:400;font-display:swap;src:url(fonts/libre-caslon-text-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Libre Caslon Text";font-weight:700;font-display:swap;src:url(fonts/libre-caslon-text-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Albert Sans";font-weight:400;font-display:swap;src:url(fonts/albert-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Albert Sans";font-weight:500;font-display:swap;src:url(fonts/albert-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Albert Sans";font-weight:600;font-display:swap;src:url(fonts/albert-sans-latin-600-normal.woff2) format("woff2")}
+</style>
+<title>DaTerra Paisagismo · V2</title>
+<meta name="description" content="Paisagismo com responsabilidade agronômica em Recife: projetos, implantação, manutenção e revitalização de áreas verdes para condomínios, hotéis, empresas e construtoras.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="DaTerra Paisagismo | Projetos, Implantação e Manutenção de Jardins em Recife">
+<meta property="og:description" content="Paisagismo com responsabilidade agronômica para condomínios, hotéis, empresas e construtoras no Recife.">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+/* Conceito "Trópico Construído": o jardim tropical do Recife como parte da arquitetura.
+   Grid de 12 colunas, 1.240px. Composição editorial: faixas alternadas off-white / areia / floresta,
+   texto denso ao lado de espaço vazio, arco (desenho de canteiro) usado só em 3 imagens-chave.
+   Sem cards como padrão, sem ícones decorativos. Movimento: só portfólio horizontal, linha de etapas e revelação de fotos. */
+:root{
+  --floresta:#1F3B2E; --floresta-2:#17301F;
+  --natural:#476B50; --salvia:#A8B89A;
+  --areia:#E6DECF; --off:#F7F5EF; --terra:#A67C52;
+  --tinta:#1B2A21; --tinta-2:#55615A; --linha:#D8D0C1; --branco:#FFFFFF;
+  --sobre-escuro:#EEF0E8; --sobre-escuro-2:#B9C4B4; --linha-escura:rgba(238,240,232,.18);
+  --display:"Libre Caslon Display","Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --ui:"Albert Sans","Helvetica Neue",Arial,system-ui,sans-serif;
+  --gl:max(16px, env(safe-area-inset-left, 0px));
+  --gr:max(16px, env(safe-area-inset-right, 0px));
+  --topo:76px; --r:6px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:90px}
+body{background:var(--off);color:var(--tinta);font-family:var(--ui);font-size:16.5px;line-height:1.62;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:90;background:var(--off)}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:3px}
+.pular{position:fixed;left:12px;top:-60px;z-index:200;background:var(--floresta);color:var(--off);padding:10px 16px;border-radius:var(--r);text-decoration:none;font-weight:600}
+.pular:focus{top:calc(10px + env(safe-area-inset-top,0px))}
+.wrap{max-width:1240px;margin:0 auto;padding-left:var(--gl);padding-right:var(--gr)}
+.g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+h1,h2{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.012em}
+h3,h4{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(38px,4.6vw,64px);line-height:1.06}
+h2{font-size:clamp(30px,3.6vw,50px);line-height:1.08}
+h3{font-size:clamp(21px,1.8vw,26px);line-height:1.25}
+p{margin:0}
+.rot{font-size:14.5px;font-weight:500;color:var(--natural);display:block}
+.lead{font-size:clamp(16px,1.25vw,18.5px);color:var(--tinta-2);max-width:54ch}
+.sec{padding-block:clamp(72px,9vw,128px)}
+.pend{border-bottom:1px dashed currentColor;opacity:.85}
+.ilus{position:absolute;right:10px;bottom:10px;z-index:3;font-size:10.5px;font-weight:600;letter-spacing:.03em;background:rgba(27,42,33,.6);color:var(--off);padding:3px 8px;border-radius:3px}
+.foto{position:relative;overflow:hidden;background:var(--areia);border-radius:var(--r)}
+.foto img{width:100%;height:100%;object-fit:cover}
+.arco{border-radius:999px 999px var(--r) var(--r)}
+/* revelação leve das fotos */
+.rv-img img{transition:transform 1.1s cubic-bezier(.2,.7,.1,1)}
+.rv-img:not(.in) img{transform:scale(1.06)}
+
+/* botões e links */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;text-decoration:none;font:500 15px var(--ui);padding:14px 22px;border-radius:var(--r);background:var(--floresta);color:var(--off);transition:background .2s,color .2s}
+.btn svg{width:16px;height:16px;transition:transform .2s}
+.btn:hover{background:var(--natural)}
+.btn:hover svg{transform:translateX(3px)}
+.btn.contorno{background:transparent;color:var(--floresta);box-shadow:inset 0 0 0 1.5px var(--floresta)}
+.btn.contorno:hover{background:var(--floresta);color:var(--off)}
+.btn.claro{background:var(--off);color:var(--floresta)}
+.btn.claro:hover{background:var(--salvia)}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:15px;text-decoration:none;color:var(--floresta);border-bottom:1px solid currentColor;padding-bottom:2px}
+.link svg{width:14px;height:14px;transition:transform .2s}
+.link:hover{color:var(--natural)}
+.link:hover svg{transform:translateX(3px)}
+
+/* ---------- cabeçalho ---------- */
+.cabec{position:sticky;top:env(safe-area-inset-top,0px);z-index:80;background:var(--off);transition:box-shadow .3s}
+.cabec.sombra{box-shadow:0 1px 0 var(--linha)}
+.cabec .wrap{display:flex;align-items:center;gap:28px;height:var(--topo)}
+.marca{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--floresta);flex:none}
+.marca svg{width:34px;height:34px}
+.marca .nm{display:grid;line-height:1}
+.marca b{font-family:var(--serif);font-weight:400;font-size:23px;letter-spacing:-.01em}
+.marca small{font-size:8.5px;font-weight:600;letter-spacing:.42em;margin-top:4px}
+.menu{display:flex;gap:4px;margin-left:auto;align-items:center}
+.menu a{text-decoration:none;font-size:14.5px;font-weight:500;padding:9px 12px;color:var(--tinta-2);border-radius:4px}
+.menu a:hover{color:var(--floresta)}
+.menu a[aria-current="page"]{color:var(--floresta);box-shadow:inset 0 -1.5px 0 var(--floresta);border-radius:0}
+.cabec .acoes{display:flex;gap:8px;align-items:center}
+.cabec .btn{padding:11px 18px;font-size:14.5px}
+.burger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;align-items:center;justify-content:center;color:var(--floresta)}
+.burger span{display:block;width:22px;height:1.5px;background:currentColor;box-shadow:0 -7px 0 currentColor,0 7px 0 currentColor}
+@media (max-width:1060px){.menu{display:none}.burger{display:inline-flex}.cabec .acoes{margin-left:auto}}
+.gaveta{position:fixed;inset:0;z-index:95;background:var(--off);display:flex;flex-direction:column;padding:calc(10px + env(safe-area-inset-top,0px)) var(--gr) calc(24px + env(safe-area-inset-bottom,0px)) var(--gl);overflow-y:auto}
+.gaveta .top{display:flex;justify-content:space-between;align-items:center;height:56px}
+.gaveta .top button{background:none;border:1px solid var(--linha);border-radius:var(--r);cursor:pointer;font-weight:500;padding:8px 14px}
+.gaveta nav{display:grid;margin-top:12px}
+.gaveta nav a{font-family:var(--serif);font-size:26px;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--linha);color:var(--floresta)}
+.gaveta nav a.s{font-family:var(--ui);font-size:15px;padding:8px 0 8px 14px;border:0;color:var(--natural)}
+.gaveta .btn{margin-top:28px}
+
+/* ---------- hero (split com arco) ---------- */
+.hero{padding-block:clamp(36px,5vw,72px) 0}
+.hero .g12{align-items:end}
+.hero .txt{grid-column:1/8;display:grid;gap:24px;padding-bottom:clamp(8px,3vw,40px)}
+.hero h1{max-width:16ch}
+.hero .sub{font-size:clamp(16px,1.3vw,18.5px);color:var(--tinta-2);max-width:50ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .img{grid-column:8/13;aspect-ratio:4/5.4;max-height:calc(100svh - var(--topo) - 140px);min-height:420px;width:100%}
+.hero .img img{object-position:50% 40%}
+.migalha{display:flex;flex-wrap:wrap;gap:8px;font-size:13.5px;color:var(--tinta-2)}
+.migalha a{text-decoration:none}.migalha a:hover{text-decoration:underline}
+.hero.pg .img{aspect-ratio:4/4.4;min-height:320px;max-height:460px}
+.hero.pg h1{font-size:clamp(36px,4.2vw,58px);max-width:18ch}
+.linha-esp{margin-top:clamp(40px,5vw,64px);border-top:1px solid var(--tinta)}
+.linha-esp .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.linha-esp a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 20px 20px 0;text-decoration:none;font-family:var(--serif);font-size:19px;color:var(--floresta);border-right:1px solid var(--linha)}
+.linha-esp a+a{padding-left:20px}
+.linha-esp a:last-child{border-right:0}
+.linha-esp a svg{width:15px;height:15px;color:var(--natural);transition:transform .2s;flex:none}
+.linha-esp a:hover svg{transform:translateX(4px)}
+.linha-esp a:hover{color:var(--natural)}
+.linha-h{display:block;overflow:hidden;padding-bottom:.08em}
+.linha-h>span{display:block;animation:sobe .9s cubic-bezier(.2,.75,.15,1) both}
+.linha-h:nth-child(2)>span{animation-delay:.07s}.linha-h:nth-child(3)>span{animation-delay:.14s}
+@keyframes sobe{from{transform:translateY(104%)}}
+
+/* ---------- diferencial ---------- */
+.dif .g12{row-gap:40px;align-items:start}
+.dif .img{grid-column:1/5;aspect-ratio:3/4}
+.dif .txt{grid-column:6/13;display:grid;gap:28px;padding-top:clamp(0px,4vw,56px)}
+.dif .frase{font-family:var(--serif);font-size:clamp(24px,2.3vw,33px);line-height:1.38;color:var(--floresta);letter-spacing:-.01em}
+.fatos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--tinta);margin-top:8px}
+.fatos div{padding:18px 18px 0 0;display:grid;gap:6px;align-content:start}
+.fatos div+div{padding-left:18px;border-left:1px solid var(--linha)}
+.fatos b{font-family:var(--serif);font-weight:400;font-size:19px;color:var(--floresta)}
+.fatos p{font-size:14.5px;color:var(--tinta-2);line-height:1.55}
+
+/* ---------- lista editorial com prévia (serviços e loja) ---------- */
+.lista-ed{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:start}
+.lista-ed .itens{grid-column:1/8;border-top:1px solid var(--tinta)}
+.lista-ed .previa{grid-column:9/13;position:sticky;top:calc(var(--topo) + 24px);aspect-ratio:4/5}
+.lista-ed .previa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s}
+.lista-ed .previa img.on{opacity:1}
+.item-ed{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:26px 0;border-bottom:1px solid var(--linha);text-decoration:none;color:var(--tinta);position:relative}
+.item-ed h3{font-family:var(--display);font-size:clamp(26px,2.8vw,40px);line-height:1.1;color:var(--floresta);transition:color .2s}
+.item-ed p{grid-column:1;font-size:15.5px;color:var(--tinta-2);max-width:52ch}
+.item-ed .ir{grid-row:1/3;grid-column:2;align-self:center;width:46px;height:46px;border-radius:50%;border:1px solid var(--linha);display:grid;place-items:center;transition:background .25s,border-color .25s,color .25s}
+.item-ed .ir svg{width:15px;height:15px}
+.item-ed:hover h3,.item-ed:focus-visible h3,.item-ed.on h3{color:var(--natural)}
+.item-ed:hover .ir,.item-ed.on .ir{background:var(--floresta);border-color:var(--floresta);color:var(--off)}
+.item-ed .mini{display:none}
+
+/* ---------- segmentos (faixa floresta com abas) ---------- */
+.escuro{background:var(--floresta);color:var(--sobre-escuro)}
+.escuro .rot{color:var(--salvia)}
+.escuro .lead{color:var(--sobre-escuro-2)}
+.segm .g12{row-gap:40px;align-items:start}
+.segm .cab{grid-column:1/6;display:grid;gap:18px}
+.segm .abas{grid-column:1/6;display:grid;border-top:1px solid var(--linha-escura);margin-top:8px}
+.segm .abas button{background:none;border:0;border-bottom:1px solid var(--linha-escura);text-align:left;cursor:pointer;padding:16px 0;font-family:var(--serif);font-size:21px;color:var(--sobre-escuro-2);display:flex;justify-content:space-between;align-items:center;transition:color .2s}
+.segm .abas button svg{width:15px;height:15px;opacity:0;transition:opacity .2s,transform .2s}
+.segm .abas button[aria-selected="true"]{color:var(--off)}
+.segm .abas button[aria-selected="true"] svg{opacity:1;transform:translateX(4px)}
+.segm .abas button:hover{color:var(--off)}
+.segm .painel{grid-column:7/13;grid-row:1/3;display:grid;gap:28px;align-content:start;padding-top:6px}
+.segm .painel h3{font-family:var(--display);font-size:clamp(30px,3vw,44px);line-height:1.1;color:var(--off)}
+.segm .pb{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;border-top:1px solid var(--linha-escura);padding-top:22px}
+.segm .pb span{display:block;font-size:14px;font-weight:600;color:var(--salvia);margin-bottom:8px}
+.segm .pb p{color:var(--sobre-escuro);font-size:15.5px}
+.segm .painel .acoes{display:flex;flex-wrap:wrap;gap:12px}
+.segm .painel .link{color:var(--off)}
+.segm .painel[data-anim]{animation:entra .45s cubic-bezier(.2,.7,.1,1)}
+@keyframes entra{from{opacity:.2;transform:translateY(8px)}}
+
+/* ---------- portfólio horizontal ---------- */
+.horiz{position:relative}
+.horiz .cena{position:sticky;top:var(--topo);height:calc(100vh - var(--topo));overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:clamp(20px,3.5vh,36px)}
+.horiz .cena>.wrap{width:100%}
+.horiz .cab{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.horiz .cab>div{display:grid;gap:14px}
+.faixa-h{display:flex;gap:28px;padding-left:max(var(--gl),calc((100vw - 1240px)/2 + 16px));padding-right:var(--gr);will-change:transform}
+.proj{flex:none;width:min(500px,68vw);display:grid;gap:14px;cursor:pointer;background:none;border:0;padding:0;text-align:left;text-decoration:none;color:var(--tinta);align-content:start}
+.proj .foto{aspect-ratio:16/11}
+.proj .foto img{transition:transform .7s cubic-bezier(.2,.7,.1,1)}
+.proj:hover .foto img{transform:scale(1.035)}
+.proj .meta{font-size:13.5px;color:var(--tinta-2)}
+.proj h3{font-size:clamp(21px,1.8vw,26px);color:var(--floresta)}
+.proj.fim{width:min(360px,68vw);align-content:center;justify-items:start;gap:18px;padding:0 24px;border-left:1px solid var(--linha)}
+.proj.fim h3{font-family:var(--display);font-size:clamp(28px,2.6vw,38px)}
+.progresso{display:flex;align-items:center;gap:16px}
+.progresso .bar{flex:1;height:1px;background:var(--linha)}
+.progresso .bar i{display:block;height:2px;margin-top:-.5px;width:0;background:var(--floresta)}
+.progresso span{font-size:13px;font-weight:500;font-variant-numeric:tabular-nums;color:var(--tinta-2)}
+
+/* ---------- manutenção ---------- */
+.areia{background:var(--areia)}
+.manut .g12{row-gap:40px;align-items:start}
+.manut .a{grid-column:1/6;display:grid;gap:22px}
+.manut .b{grid-column:7/13;display:grid;gap:36px}
+.regras{display:grid;border-top:1px solid var(--tinta)}
+.regras div{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;padding-block:18px;border-bottom:1px solid var(--linha)}
+.regras b{font-family:var(--serif);font-weight:400;font-size:19px;color:var(--floresta)}
+.regras p{font-size:15px;color:var(--tinta-2)}
+.proc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;position:relative}
+.proc::before,.proc .lp{content:"";position:absolute;left:0;right:0;top:15px;height:1px;background:var(--linha)}
+.proc .lp{background:var(--floresta);right:auto;width:var(--p,0%);height:2px;top:14.5px}
+.passo{position:relative;display:grid;gap:8px;align-content:start;padding-right:8px}
+.passo .n{width:31px;height:31px;border-radius:50%;background:var(--off);border:1px solid var(--linha);display:grid;place-items:center;font-size:13px;font-weight:600;position:relative;z-index:1;transition:all .35s;font-variant-numeric:tabular-nums}
+.areia .passo .n{background:var(--areia)}
+.passo.on .n{background:var(--floresta);color:var(--off);border-color:var(--floresta)}
+.passo b{font-weight:600;font-size:15px}
+.passo p{font-size:14px;color:var(--tinta-2);line-height:1.5}
+
+/* ---------- loja ---------- */
+.lj .g12{row-gap:40px;align-items:start}
+.lj .img{grid-column:1/6;aspect-ratio:4/5}
+.lj .txt{grid-column:7/13;display:grid;gap:22px}
+.cats{border-top:1px solid var(--tinta)}
+.cats a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--linha);text-decoration:none}
+.cats b{font-family:var(--serif);font-weight:400;font-size:20px;color:var(--floresta)}
+.cats span{grid-column:1;font-size:14px;color:var(--tinta-2)}
+.cats svg{grid-row:1/3;grid-column:2;width:15px;height:15px;color:var(--natural);transition:transform .2s}
+.cats a:hover svg{transform:translateX(4px)}
+.cats a:hover b{color:var(--natural)}
+.dados-lj{display:flex;flex-wrap:wrap;gap:8px 32px;font-size:14.5px;color:var(--tinta-2)}
+.aviso{font-size:13.5px;color:var(--tinta-2)}
+
+/* ---------- CTA final ---------- */
+.final .g12{row-gap:40px;align-items:start}
+.final .txt{grid-column:1/6;display:grid;gap:22px;position:sticky;top:calc(var(--topo) + 32px)}
+.final .frm{grid-column:7/13}
+.contatos{display:grid;border-top:1px solid var(--linha-escura);margin-top:8px}
+.contatos div{display:flex;gap:14px;align-items:center;padding-block:13px;border-bottom:1px solid var(--linha-escura);font-size:15px}
+.contatos svg{width:18px;height:18px;color:var(--salvia);flex:none}
+.contatos a{text-decoration:none}.contatos a:hover{text-decoration:underline}
+
+/* ---------- formulário ---------- */
+.form{background:var(--off);color:var(--tinta);border-radius:var(--r);padding:clamp(22px,3vw,36px);display:grid;gap:20px}
+.form h3{font-size:25px}
+.passos-f{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.passos-f div{display:grid;gap:8px;font-size:12.5px;font-weight:500;color:var(--tinta-2)}
+.passos-f i{display:block;height:2px;background:var(--linha);overflow:hidden}
+.passos-f i::after{content:"";display:block;height:100%;width:0;background:var(--floresta);transition:width .4s}
+.passos-f .feito i::after,.passos-f .atual i::after{width:100%}
+.passos-f .atual{color:var(--floresta)}
+.etapa-f{display:grid;gap:16px}
+.campo{display:grid;gap:7px;min-width:0}
+.campo>span,.campo legend{font-size:14px;font-weight:500}
+.campo i.req{font-style:normal;color:var(--terra)}
+.campo input,.campo select,.campo textarea{font:400 16px var(--ui);color:var(--tinta);background:var(--branco);border:1px solid var(--linha);border-radius:4px;padding:12px 14px;width:100%}
+.campo textarea{min-height:90px;resize:vertical}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--floresta);box-shadow:0 0 0 3px rgba(71,107,80,.16)}
+.campo [aria-invalid="true"]{border-color:#9B3B2A}
+.duas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+fieldset.campo{border:0;padding:0;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;position:relative}
+.chips input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.chips label{display:inline-flex;align-items:center;padding:9px 14px;border-radius:4px;border:1px solid var(--linha);background:var(--branco);font-size:14px;font-weight:500;cursor:pointer;transition:all .2s}
+.chips label:hover{border-color:var(--tinta-2)}
+.chips input:checked+label{background:var(--floresta);border-color:var(--floresta);color:var(--off)}
+.chips input:focus-visible+label{outline:2px solid var(--terra);outline-offset:2px}
+.cond{background:var(--areia);border-radius:4px;padding:14px 16px}
+.nav-f{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.volta{background:none;border:0;cursor:pointer;font-weight:500;font-size:14.5px;color:var(--tinta-2);padding:10px 0}
+.erro{color:#9B3B2A;font-size:14px}
+.lgpd{font-size:12.5px;color:var(--tinta-2);line-height:1.5}
+.lgpd a{color:var(--natural)}
+.resumo{display:grid;gap:14px}
+.resumo pre{white-space:pre-wrap;margin:0;font:13px/1.6 ui-monospace,Menlo,monospace;background:var(--areia);border-radius:4px;padding:14px;max-height:240px;overflow:auto}
+.resumo .acts{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- páginas internas ---------- */
+.duo{align-items:center;row-gap:36px}
+.duo .txt{grid-column:1/7;display:grid;gap:22px}
+.duo .img{grid-column:8/13;aspect-ratio:4/5}
+.duo.inv .txt{grid-column:7/13;order:2}.duo.inv .img{grid-column:1/6}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--tinta)}
+.cols3>div{padding:22px 24px 0 0;display:grid;gap:10px;align-content:start}
+.cols3>div+div{padding-left:24px;border-left:1px solid var(--linha)}
+.cols3 h3{color:var(--floresta)}
+.cols3 p{color:var(--tinta-2);font-size:15.5px}
+.cab-s{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:end;row-gap:16px;margin-bottom:clamp(32px,4vw,52px)}
+.cab-s>div:first-child{grid-column:1/8;display:grid;gap:14px}
+.cab-s>div:last-child:not(:first-child){grid-column:8/13}
+.equipe{border-top:1px solid var(--tinta)}
+.pessoa{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding-block:26px;border-bottom:1px solid var(--linha);align-items:center}
+.pessoa .ph{grid-column:1/3;aspect-ratio:1/1;border-radius:50%;background:var(--areia);display:grid;place-items:center;text-align:center;font-size:12px;color:var(--tinta-2);padding:10px}
+.pessoa h3{grid-column:3/7;font-family:var(--display);font-size:clamp(30px,3vw,42px);color:var(--floresta)}
+.pessoa p{grid-column:7/13;color:var(--tinta-2)}
+.pessoa p b{display:block;color:var(--tinta);font-weight:500;margin-bottom:4px}
+.metodo{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--tinta)}
+.metodo div{padding:22px 20px 0 0;display:grid;gap:8px;align-content:start}
+.metodo div+div{padding-left:20px;border-left:1px solid var(--linha)}
+.metodo .n{font-size:13px;font-weight:600;color:var(--terra);font-variant-numeric:tabular-nums}
+.metodo b{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--floresta)}
+.metodo p{font-size:14.5px;color:var(--tinta-2)}
+.dl{display:grid;border-top:1px solid var(--tinta)}
+.dl div{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:20px;padding-block:16px;border-bottom:1px solid var(--linha)}
+.dl b{font-family:var(--serif);font-weight:400;font-size:19px;color:var(--floresta)}
+.dl p{color:var(--tinta-2);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14.5px;color:var(--tinta-2)}
+.tags span+span::before{content:"·";margin-right:14px;color:var(--linha)}
+.outros{border-top:1px solid var(--tinta)}
+.outros a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--linha);text-decoration:none;font-family:var(--serif);font-size:22px;color:var(--floresta)}
+.outros a svg{width:15px;height:15px;color:var(--natural);transition:transform .2s;flex:none}
+.outros a:hover svg{transform:translateX(4px)}
+.serv-l{display:grid;gap:clamp(64px,8vw,104px)}
+.serv-l .duo .img{aspect-ratio:5/4}
+.serv-l .num{font-size:13px;font-weight:600;color:var(--terra)}
+.sol{border-top:1px solid var(--tinta)}
+.sol article{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:16px;padding-block:36px;border-bottom:1px solid var(--linha);scroll-margin-top:100px}
+.sol h3{grid-column:1/5;font-family:var(--display);font-size:clamp(26px,2.6vw,36px);color:var(--floresta)}
+.sol .d{grid-column:5/9}.sol .s{grid-column:9/13}
+.sol .d span,.sol .s span{display:block;font-size:14px;font-weight:600;color:var(--natural);margin-bottom:6px}
+.sol .d p,.sol .s p{font-size:15.5px;color:var(--tinta-2)}
+.sol .acoes{grid-column:5/13;display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.filtros button{border:1px solid var(--linha);background:transparent;border-radius:4px;padding:9px 16px;font-size:14.5px;font-weight:500;cursor:pointer}
+.filtros button[aria-pressed="true"]{background:var(--floresta);color:var(--off);border-color:var(--floresta)}
+.galeria{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:44px 28px}
+.galeria .proj{width:auto}
+.galeria .proj:nth-child(6n+1){grid-column:span 2}
+.galeria .proj:nth-child(6n+1) .foto{aspect-ratio:16/9.6}
+.nota{margin-top:44px;padding-top:18px;border-top:1px solid var(--linha);font-size:14px;color:var(--tinta-2);max-width:70ch}
+.vitrine{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 28px}
+.vit{display:grid;gap:12px;align-content:start}
+.vit .foto{aspect-ratio:4/3}
+.vit h3{color:var(--floresta)}
+.vit p{color:var(--tinta-2);font-size:15px}
+.info3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--tinta)}
+.info3>div{padding:20px 24px 0 0;display:grid;gap:6px;align-content:start;justify-items:start}
+.info3>div+div{padding-left:24px;border-left:1px solid var(--linha)}
+.info3 b{font-family:var(--serif);font-weight:400;font-size:20px;color:var(--floresta)}
+.info3 p{font-size:15px;color:var(--tinta-2)}
+.contato-g{align-items:start;row-gap:32px}
+.contato-g .frm{grid-column:1/8}
+.contato-g .lado{grid-column:9/13;display:grid;gap:22px;position:sticky;top:calc(var(--topo) + 24px)}
+.contato-g .form{border:1px solid var(--linha);background:var(--branco)}
+.contato-g .campo input,.contato-g .campo select,.contato-g .campo textarea,.contato-g .chips label{background:var(--off)}
+.contato-g .contatos{border-color:var(--linha)}
+.contato-g .contatos div{border-color:var(--linha)}
+.contato-g .contatos svg{color:var(--natural)}
+.texto-legal{max-width:70ch;display:grid;gap:16px}
+.texto-legal p{color:var(--tinta-2)}
+
+/* lightbox */
+.modal-veu{position:fixed;inset:0;z-index:100;background:rgba(18,30,22,.78);display:grid;place-items:center;padding:20px var(--gr) 20px var(--gl)}
+.modal{background:var(--off);border-radius:var(--r);max-width:1060px;width:100%;max-height:calc(100svh - 40px);overflow:auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+.modal .gal{position:relative;background:var(--floresta);min-height:460px}
+.modal .gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.modal .setas{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;align-items:center;z-index:3}
+.modal .setas button{width:44px;height:44px;border-radius:50%;border:0;background:var(--off);color:var(--floresta);cursor:pointer;display:grid;place-items:center}
+.modal .setas svg{width:16px;height:16px}
+.modal .setas span{background:rgba(27,42,33,.62);color:var(--off);font-size:12.5px;font-weight:500;padding:4px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
+.modal .t{padding:clamp(22px,3vw,34px);display:grid;gap:16px;align-content:start}
+.modal .fecha{justify-self:end;background:none;border:1px solid var(--linha);border-radius:4px;padding:8px 14px;font-size:14px;font-weight:500;cursor:pointer}
+.ficha{display:grid;border-top:1px solid var(--tinta)}
+.ficha div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding-block:11px;border-bottom:1px solid var(--linha);font-size:15px}
+.ficha span:first-child{color:var(--tinta-2);font-size:14px}
+
+/* clientes e depoimentos */
+.prova .g12{row-gap:40px;align-items:start}
+.prova .cab{grid-column:1/8;display:grid;gap:16px}
+.depo{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:clamp(24px,4vw,48px)}
+.depo figure{margin:0;display:grid;gap:14px;align-content:start;padding-top:20px;border-top:1px solid var(--linha)}
+.depo blockquote{margin:0;font-family:var(--serif);font-size:clamp(19px,1.6vw,22px);line-height:1.45;color:var(--floresta)}
+.depo figcaption{font-size:14px;color:var(--tinta-2)}
+.prova .nota{grid-column:1/-1;margin-top:8px}
+.equipe-foto{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:24px;align-items:start}
+.equipe-foto figure{grid-column:1/6;margin:0;display:grid;gap:10px}
+.equipe-foto figure .foto{aspect-ratio:4/5}
+.equipe-foto figcaption{font-size:14px;color:var(--tinta-2)}
+.equipe-foto .equipe{grid-column:7/13}
+.equipe-foto .pessoa{grid-template-columns:minmax(0,1fr) minmax(0,1.4fr)}
+.equipe-foto .pessoa h3{grid-column:auto}
+.equipe-foto .pessoa p{grid-column:auto}
+@media (max-width:980px){.prova .cab{grid-column:1/-1}.depo{grid-template-columns:1fr}.equipe-foto figure,.equipe-foto .equipe{grid-column:1/-1}}
+@media (max-width:640px){.equipe-foto .pessoa{grid-template-columns:1fr;row-gap:6px}.equipe-foto .pessoa p{margin-top:0}}
+
+/* rodapé */
+.rodape{background:var(--floresta-2);color:var(--sobre-escuro)}
+.rodape .g12{padding-block:72px 48px;row-gap:36px}
+.rodape .m{grid-column:1/5}
+.rodape .m p{color:var(--sobre-escuro-2);font-size:14.5px;max-width:34ch;margin-top:18px}
+.rodape .c{grid-column:span 2}
+.rodape .c:last-child{grid-column:span 4}
+.rodape h4{font-family:var(--ui);font-size:14px;font-weight:600;color:var(--salvia);margin-bottom:14px}
+.rodape ul{list-style:none;padding:0;margin:0;display:grid;gap:9px;font-size:14.5px;color:var(--sobre-escuro)}
+.rodape ul a{text-decoration:none}.rodape ul a:hover{text-decoration:underline}
+.rodape .marca{color:var(--sobre-escuro)}
+.rodape .base{border-top:1px solid var(--linha-escura);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px calc(24px + env(safe-area-inset-bottom,0px));font-size:13px;color:var(--sobre-escuro-2)}
+.rodape .base a{text-decoration:none}.rodape .base a:hover{text-decoration:underline}
+
+.wpp{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;width:54px;height:54px;border-radius:50%;background:var(--natural);color:var(--off);display:grid;place-items:center;box-shadow:0 8px 20px rgba(31,59,46,.25);transition:background .2s}
+.wpp:hover{background:var(--floresta)}
+.wpp svg{width:24px;height:24px}
+.barra-m{display:none}
+
+/* ---------- tablet ---------- */
+@media (max-width:980px){
+  .hero .txt{grid-column:1/-1}
+  .hero .img{grid-column:1/-1;aspect-ratio:16/11;min-height:0;max-height:none;margin-top:28px;border-radius:220px 220px var(--r) var(--r)}
+  .hero.pg .img{aspect-ratio:16/10}
+  .linha-esp .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .linha-esp a:nth-child(2){border-right:0}
+  .linha-esp a:nth-child(3){padding-left:0}
+  .linha-esp a:nth-child(-n+2){border-bottom:1px solid var(--linha)}
+  .dif .img{grid-column:1/6}.dif .txt{grid-column:7/13;padding-top:0}
+  .fatos{grid-template-columns:1fr}.fatos div,.fatos div+div{padding:16px 0;border-left:0;border-bottom:1px solid var(--linha)}
+  .lista-ed .itens{grid-column:1/-1}.lista-ed .previa{display:none}
+  .item-ed{grid-template-columns:96px minmax(0,1fr) auto;column-gap:18px}
+  .item-ed .mini{display:block;grid-row:1/3;width:96px;aspect-ratio:1/1;border-radius:4px;overflow:hidden}
+  .item-ed .mini img{width:100%;height:100%;object-fit:cover}
+  .item-ed h3,.item-ed p{grid-column:2}
+  .item-ed .ir{grid-column:3}
+  .segm .cab,.segm .abas,.segm .painel{grid-column:1/-1;grid-row:auto}
+  .segm .abas{display:flex;overflow-x:auto;gap:8px;border-top:0;scrollbar-width:none;margin-inline:calc(-1 * var(--gl));padding-inline:var(--gl)}
+  .segm .abas button{flex:0 0 auto;border:1px solid var(--linha-escura);border-radius:999px;padding:9px 16px;font-family:var(--ui);font-size:14.5px;font-weight:500}
+  .segm .abas button svg{display:none}
+  .segm .abas button[aria-selected="true"]{background:var(--off);color:var(--floresta);border-color:var(--off)}
+  .manut .a,.manut .b{grid-column:1/-1}
+  .lj .img{grid-column:1/-1;aspect-ratio:16/11;border-radius:220px 220px var(--r) var(--r)}
+  .lj .txt{grid-column:1/-1}
+  .final .txt,.final .frm{grid-column:1/-1;position:static}
+  .duo .txt,.duo .img,.duo.inv .txt,.duo.inv .img{grid-column:1/-1;order:0}
+  .duo .img{aspect-ratio:16/11}
+  .duo .arco{border-radius:220px 220px var(--r) var(--r)}
+  .cab-s>div:first-child,.cab-s>div:last-child:not(:first-child){grid-column:1/-1}
+  .sol h3,.sol .d,.sol .s,.sol .acoes{grid-column:1/-1}
+  .contato-g .frm,.contato-g .lado{grid-column:1/-1;position:static}
+  .sv-a,.sv-b{grid-column:1/-1!important}
+  .galeria{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vitrine{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rodape .m{grid-column:1/-1}.rodape .c,.rodape .c:last-child{grid-column:span 4}
+  .horiz{height:auto!important}
+  .horiz .cena{position:static;height:auto;padding-block:clamp(72px,9vw,128px)}
+  .faixa-h{transform:none!important;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+  .proj{scroll-snap-align:start}
+  .progresso{display:none}
+  .modal{grid-template-columns:1fr}.modal .gal{min-height:260px}
+}
+/* ---------- mobile ---------- */
+@media (max-width:640px){
+  :root{--topo:62px}
+  body{font-size:16px;padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+  h1{font-size:clamp(33px,9.4vw,40px)}
+  h2{font-size:clamp(28px,7.8vw,34px)}
+  .sec{padding-block:64px}
+  .cabec .acoes .btn{display:none}
+  .marca svg{width:30px;height:30px}.marca b{font-size:21px}
+  .hero{padding-top:28px}
+  .hero .txt{gap:18px}
+  .hero .ctas{flex-direction:column;align-items:stretch}
+  .hero .ctas .btn{width:100%}
+  .hero .img,.lj .img,.duo .arco{aspect-ratio:4/4.2;border-radius:160px 160px var(--r) var(--r)}
+  .hero.pg .img{aspect-ratio:4/3.4}
+  .linha-esp{margin-top:36px}
+  .linha-esp .wrap{grid-template-columns:1fr}
+  .linha-esp a,.linha-esp a+a{padding:16px 0;border-right:0;border-bottom:1px solid var(--linha);font-size:18px}
+  .linha-esp a:last-child{border-bottom:0}
+  .dif .img{grid-column:1/-1;aspect-ratio:4/3}
+  .dif .txt{grid-column:1/-1}
+  .dif .frase{font-size:23px}
+  .item-ed{grid-template-columns:72px minmax(0,1fr);padding:20px 0;row-gap:4px}
+  .item-ed .mini{width:72px}
+  .item-ed .ir{display:none}
+  .item-ed h3{font-size:24px}
+  .item-ed p{font-size:14.5px}
+  .segm .pb{grid-template-columns:1fr;gap:16px}
+  .segm .painel .acoes .btn{width:100%}
+  .regras div{grid-template-columns:1fr;gap:4px}
+  .proc{grid-template-columns:1fr;gap:18px}
+  .proc::before,.proc .lp{display:none}
+  .passo{grid-template-columns:31px 1fr;column-gap:14px}
+  .passo .n{grid-row:span 2}
+  .proj{width:84vw}
+  .proj.fim{width:70vw}
+  .form{padding:20px}
+  .duas{grid-template-columns:1fr}
+  .chips label{padding:9px 12px;font-size:13.5px}
+  .nav-f{flex-direction:column-reverse;align-items:stretch}
+  .nav-f .btn{width:100%;margin-left:0!important}
+  .nav-f .link,.nav-f .volta{align-self:center}
+  .resumo .acts .btn{width:100%}
+  .final .contatos{display:none}
+  .cols3,.metodo,.info3{grid-template-columns:1fr}
+  .cols3>div,.cols3>div+div,.metodo div,.metodo div+div,.info3>div,.info3>div+div{padding:18px 0;border-left:0;border-bottom:1px solid var(--linha)}
+  .pessoa .ph{grid-column:1/4}
+  .pessoa h3{grid-column:4/13}
+  .pessoa p{grid-column:1/-1;margin-top:14px}
+  .dl div{grid-template-columns:1fr;gap:4px}
+  .sol .acoes .btn{width:100%}
+  .filtros{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(-1 * var(--gl));padding-inline:var(--gl);scrollbar-width:none}
+  .filtros button{flex:0 0 auto}
+  .galeria,.vitrine{grid-template-columns:1fr;gap:36px}
+  .galeria .proj:nth-child(6n+1){grid-column:auto}
+  .galeria .proj:nth-child(6n+1) .foto{aspect-ratio:16/11}
+  .rodape .c,.rodape .c:last-child{grid-column:1/-1}
+  .rodape .g12{padding-block:52px 32px}
+  .rodape .base{padding-bottom:calc(20px + 74px + env(safe-area-inset-bottom,0px))}
+  .wpp{display:none}
+  .barra-m{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:75;gap:10px;padding:10px var(--gr) calc(10px + env(safe-area-inset-bottom,0px)) var(--gl);background:var(--off);border-top:1px solid var(--linha);transition:transform .3s cubic-bezier(.2,.7,.1,1)}
+  .barra-m.fora{transform:translateY(110%)}
+  .barra-m .btn{flex:1;padding:14px 16px}
+  .barra-m .wz{flex:0 0 52px;padding:0;background:var(--natural)}
+  .barra-m .wz svg{width:22px;height:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv-img:not(.in) img{transform:none}
+}
+
+/* faixa de logos de clientes */
+.logos{position:relative;grid-column:1/-1;border-block:1px solid var(--linha);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.logos .pista{display:flex;width:max-content;animation:logos-rola 46s linear infinite}
+.logos:hover .pista,.logos:focus-within .pista,.logos.parado .pista{animation-play-state:paused}
+.logos .trilho{display:flex;align-items:center;gap:clamp(48px,6vw,88px);list-style:none;margin:0;padding:34px clamp(24px,3vw,44px);flex:none}
+.logos .trilho:first-child{padding-left:clamp(48px,6vw,88px)}
+.logos li{flex:none;display:flex;align-items:center}
+.logos img{height:var(--h);width:auto;max-width:none;opacity:.86;transition:opacity .25s}
+.logos li:hover img{opacity:1}
+.logos .pausa{position:absolute;right:0;bottom:6px;background:var(--off);border:0;font:500 12.5px var(--ui);color:var(--tinta-2);padding:4px 8px;border-radius:3px;cursor:pointer;opacity:0;transition:opacity .2s}
+.logos:hover .pausa,.logos .pausa:focus-visible,.logos.parado .pausa{opacity:1}
+@keyframes logos-rola{to{transform:translateX(-50%)}}
+@media (max-width:640px){.logos .trilho{padding-block:24px;gap:44px}.logos img{height:calc(var(--h)*.76)}.logos .pausa{opacity:1}}
+@media (prefers-reduced-motion:reduce){.logos{-webkit-mask-image:none;mask-image:none}.logos .pista{width:auto;animation:none}.logos .trilho{flex-wrap:wrap;justify-content:center;row-gap:28px;padding-inline:0!important}.logos .trilho[aria-hidden]{display:none}.logos .pausa{display:none}}
+
+</style>
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="cabec" id="cabec">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="DaTerra Paisagismo, início">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 43c0-9 1-17 5-25"/><path d="M27 20C26 10 33 4 44 3c1 11-6 18-17 17z"/><path d="M27 20c4-5 9-9 14-13"/><path d="M23 30C21 21 14 17 4 18c0 10 7 14 19 12z"/><path d="M22 29c-4-4-9-7-14-8"/></svg>
+      <span class="nm"><b>DaTerra</b><small>PAISAGISMO</small></span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#a-daterra" data-r="a-daterra">A DaTerra</a>
+      <a href="#servicos" data-r="servicos">Serviços</a>
+      <a href="#solucoes-empreendimentos" data-r="solucoes-empreendimentos">Empreendimentos</a>
+      <a href="#projetos" data-r="projetos">Projetos</a>
+      <a href="#loja" data-r="loja">Nossa Loja</a>
+      <a href="#contato" data-r="contato">Contato</a>
+    </nav>
+    <div class="acoes">
+      <a class="btn" href="#contato">Solicitar orçamento</a>
+      <button class="burger" type="button" id="abreMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="gaveta" id="gaveta" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="top"><span class="marca"><span class="nm"><b>DaTerra</b><small>PAISAGISMO</small></span></span><button type="button" id="fechaMenu">Fechar</button></div>
+  <nav id="navMob" aria-label="Menu"></nav>
+  <a class="btn" href="#contato">Solicitar orçamento</a>
+</div>
+
+<main id="conteudo" tabindex="-1">
+
+<!-- ================= INÍCIO ================= -->
+<div class="pagina" data-p="inicio">
+  <section class="hero" aria-labelledby="h-inicio">
+    <div class="wrap g12">
+      <div class="txt">
+        <span class="rot">Paisagismo profissional · Recife</span>
+        <h1 id="h-inicio"><span class="linha-h"><span>Paisagismo com responsabilidade</span></span><span class="linha-h"><span>agronômica para condomínios,</span></span><span class="linha-h"><span>hotéis e empresas.</span></span></h1>
+        <p class="sub">Projetos, implantação e manutenção de áreas verdes conduzidos pelos engenheiros agrônomos da DaTerra, com espécies escolhidas para o clima e o uso real de cada espaço.</p>
+        <div class="ctas">
+          <a class="btn" href="#contato">Solicitar orçamento <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          <a class="btn contorno" href="#projetos">Conhecer projetos</a>
+        </div>
+      </div>
+      <div class="img foto arco"><img data-src="ig-hero" data-sizes="(max-width:980px) 100vw, 40vw" alt="Jardim tropical com palmeiras, gramado e samambaias em projeto da DaTerra" fetchpriority="high"></div>
+    </div>
+    <nav class="linha-esp" aria-label="Especialidades"><div class="wrap" id="linhaEsp"></div></nav>
+  </section>
+
+  <section class="sec dif" aria-labelledby="h-dif">
+    <div class="wrap g12">
+      <div class="img foto arco rv-img"><img data-src="ig-desenho" data-sizes="(max-width:980px) 100vw, 33vw" alt="Projeto de jardim vertical desenhado à mão pela DaTerra" loading="lazy"></div>
+      <div class="txt">
+        <span class="rot" id="h-dif">Por que a DaTerra</span>
+        <p class="frase">Um jardim bonito no dia da entrega é fácil. Difícil é ele continuar saudável no calor, na chuva e no uso diário. Por isso cada projeto da DaTerra começa pela leitura técnica do solo, da luz e da rotina de quem vai usar o espaço.</p>
+        <div class="fatos">
+          <div><b>Engenheiros agrônomos</b><p>Anderson e Wallyson conduzem projetos, consultorias e laudos.</p></div>
+          <div><b>Do projeto à manutenção</b><p>A mesma equipe planeja, implanta e cuida da área verde.</p></div>
+          <div><b>Loja própria</b><p>Plantas e insumos com orientação técnica, em Recife.</p></div>
+        </div>
+        <div><a class="link" href="#a-daterra">Conheça a DaTerra <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0" aria-labelledby="h-serv">
+    <div class="wrap">
+      <div class="cab-s"><div><span class="rot">Serviços</span><h2 id="h-serv">Para criar, renovar e conservar áreas verdes.</h2></div><div><p class="lead">Conte sobre o seu espaço e receba uma orientação inicial sobre o melhor caminho.</p></div></div>
+      <div class="lista-ed" data-lista>
+        <div class="itens" id="listaServ"></div>
+        <div class="previa foto" aria-hidden="true" id="previaServ"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec escuro segm" aria-labelledby="h-seg">
+    <div class="wrap g12">
+      <div class="cab"><span class="rot">Segmentos atendidos</span><h2 id="h-seg">Cada empreendimento tem um desafio diferente.</h2></div>
+      <div class="abas" role="tablist" aria-label="Segmentos" id="abasSeg"></div>
+      <div class="painel" role="tabpanel" id="painelSeg" tabindex="0"></div>
+    </div>
+  </section>
+
+  <section class="horiz" id="horizHome" aria-labelledby="h-proj">
+    <div class="cena">
+      <div class="wrap cab"><div><span class="rot">Projetos em destaque</span><h2 id="h-proj">Paisagens que valorizam empreendimentos.</h2></div><a class="link" href="#projetos">Ver todos os projetos <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></div>
+      <div class="faixa-h" id="faixaHome" tabindex="0" aria-label="Projetos em destaque, role para o lado"></div>
+      <div class="wrap"><div class="progresso" aria-hidden="true"><span id="pgNum">01</span><div class="bar"><i id="pgBar"></i></div><span>04</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec prova" aria-labelledby="h-prova">
+    <div class="wrap g12">
+      <div class="cab"><span class="rot">Clientes</span><h2 id="h-prova">Empresas e famílias que já confiaram na DaTerra.</h2></div>
+      <div class="logos" id="logosCli"><div class="pista"><ul class="trilho"><li><img src="img/logo-ibis.webp" alt="ibis Hotels" style="--h:54px" loading="lazy" decoding="async"></li><li><img src="img/logo-tenda.webp" alt="Tenda" style="--h:30px" loading="lazy" decoding="async"></li><li><img src="img/logo-rio-ave.webp" alt="Rio Ave" style="--h:42px" loading="lazy" decoding="async"></li><li><img src="img/logo-esperanca.webp" alt="Hospital Esperança" style="--h:38px" loading="lazy" decoding="async"></li><li><img src="img/logo-memorial-sao-jose.webp" alt="Memorial São José" style="--h:38px" loading="lazy" decoding="async"></li><li><img src="img/logo-cone.webp" alt="Cone Condomínio de Negócios" style="--h:58px" loading="lazy" decoding="async"></li><li><img src="img/logo-carapitanga.webp" alt="Carapitanga" style="--h:32px" loading="lazy" decoding="async"></li><li><img src="img/logo-embaixada-eua.webp" alt="Embaixada dos Estados Unidos" style="--h:58px" loading="lazy" decoding="async"></li></ul><ul class="trilho" aria-hidden="true"><li><img src="img/logo-ibis.webp" alt="" style="--h:54px" loading="lazy" decoding="async"></li><li><img src="img/logo-tenda.webp" alt="" style="--h:30px" loading="lazy" decoding="async"></li><li><img src="img/logo-rio-ave.webp" alt="" style="--h:42px" loading="lazy" decoding="async"></li><li><img src="img/logo-esperanca.webp" alt="" style="--h:38px" loading="lazy" decoding="async"></li><li><img src="img/logo-memorial-sao-jose.webp" alt="" style="--h:38px" loading="lazy" decoding="async"></li><li><img src="img/logo-cone.webp" alt="" style="--h:58px" loading="lazy" decoding="async"></li><li><img src="img/logo-carapitanga.webp" alt="" style="--h:32px" loading="lazy" decoding="async"></li><li><img src="img/logo-embaixada-eua.webp" alt="" style="--h:58px" loading="lazy" decoding="async"></li></ul></div><button type="button" class="pausa" aria-pressed="false" aria-controls="logosCli">Pausar</button></div>
+      <div class="depo">
+        <figure><blockquote>“As plantas cuidadosamente selecionadas, os jardins bem planejados e a atenção aos detalhes são notáveis.”</blockquote><figcaption>Hospital Esperança</figcaption></figure>
+        <figure><blockquote>“O nosso jardim está incrível, um ambiente acolhedor onde vamos construir muitas memórias juntos.”</blockquote><figcaption>Cliente residencial</figcaption></figure>
+        <figure><blockquote>“O jardim projetado pela DaTerra torna nosso lar agradável e acolhedor. Mudou nossa vida.”</blockquote><figcaption>Cliente residencial</figcaption></figure>
+      </div>
+      <p class="nota">Clientes e depoimentos publicados pela DaTerra no destaque “Clientes” do Instagram. Confirmar a autorização de citação antes de publicar o site.</p>
+    </div>
+  </section>
+
+  <section class="sec areia manut" aria-labelledby="h-man">
+    <div class="wrap g12">
+      <div class="a"><span class="rot">Manutenção recorrente</span><h2 id="h-man">Áreas verdes bem cuidadas o ano inteiro.</h2><p class="lead">Para condomínios, hotéis, empresas e comércios que precisam de jardins sempre bem apresentados, sem gerenciar a rotina de cuidados.</p><div><a class="btn" href="#manutencao">Conhecer a manutenção <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></div></div>
+      <div class="b">
+        <div class="regras">
+          <div><b>Rotina planejada</b><p>Cuidados organizados de acordo com o espaço e as necessidades de cada área.</p></div>
+          <div><b>Conservação do investimento</b><p>Plantas saudáveis por mais tempo e menos necessidade de replantio.</p></div>
+          <div><b>Acompanhamento técnico</b><p>Orientação sobre o estado do jardim e os próximos cuidados.</p></div>
+        </div>
+        <div style="display:grid;gap:18px"><b style="font-weight:600">Como solicitar uma avaliação</b>
+          <div class="proc" data-proc><i class="lp"></i>
+            <div class="passo"><span class="n">1</span><b>Contato</b><p>Formulário ou WhatsApp.</p></div>
+            <div class="passo"><span class="n">2</span><b>Visita técnica</b><p>Avaliação da área e do jardim.</p></div>
+            <div class="passo"><span class="n">3</span><b>Proposta</b><p>Escopo e periodicidade sob medida.</p></div>
+            <div class="passo"><span class="n">4</span><b>Início</b><p>Rotina de cuidados com a equipe.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec lj" aria-labelledby="h-loja">
+    <div class="wrap g12">
+      <div class="img foto arco rv-img"><img data-src="ig-loja" data-sizes="(max-width:980px) 100vw, 40vw" alt="Samambaia em vaso suspenso da loja DaTerra" loading="lazy"></div>
+      <div class="txt">
+        <span class="rot">Nossa loja</span>
+        <h2 id="h-loja">Plantas, flores e tudo para o seu jardim.</h2>
+        <p class="lead">Na loja física da DaTerra você escolhe com orientação de quem trabalha com jardins todos os dias.</p>
+        <nav class="cats" id="catsHome" aria-label="Categorias da loja"></nav>
+        <div class="dados-lj"><span>R. do Machado, 0001 · Arruda, Recife · PE</span><span class="pend">Horário a confirmar</span></div>
+        <p class="aviso">Disponibilidade e valores podem variar. Consulte nossa equipe.</p>
+        <div><a class="btn contorno" href="#loja">Conheça nossa loja</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec escuro final" aria-labelledby="h-final">
+    <div class="wrap g12">
+      <div class="txt"><span class="rot">Orçamento</span><h2 id="h-final">Vamos conversar sobre o seu espaço?</h2><p class="lead">Conte o que você precisa. A equipe DaTerra entra em contato para entender o projeto e orientar os próximos passos.</p><div class="contatos" data-contatos></div></div>
+      <div class="frm" data-form="curto"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= A DATERRA ================= -->
+<div class="pagina" data-p="a-daterra" hidden>
+  <section class="hero pg" aria-labelledby="h-ad">
+    <div class="wrap g12">
+      <div class="txt"><nav class="migalha" aria-label="Você está em"><a href="#inicio">Início</a><span aria-hidden="true">/</span><span>A DaTerra</span></nav><h1 id="h-ad">Paisagismo que valoriza espaços, pessoas e empreendimentos.</h1><p class="sub">Uma empresa do Recife conduzida por engenheiros agrônomos, com projetos, implantação, manutenção e loja própria.</p></div>
+      <div class="img foto arco"><img data-src="ig-as-4" data-sizes="(max-width:980px) 100vw, 40vw" alt="Jardim residencial com samambaias e palmeiras"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap g12 duo inv">
+      <div class="txt"><span class="rot">Quem somos</span><h2>Técnica, estética e capacidade de execução.</h2><p class="lead">A DaTerra é conduzida pelos engenheiros agrônomos Anderson e Wallyson. Atuamos em projetos, implantação e manutenção de áreas verdes e mantemos uma loja física com plantas e itens de jardinagem.</p><p class="lead">Nosso trabalho parte da leitura técnica de cada espaço para chegar a jardins bonitos, funcionais e possíveis de manter ao longo do tempo.</p></div>
+      <div class="img foto rv-img"><img data-src="ig-jv-1" data-sizes="(max-width:980px) 100vw, 40vw" alt="Jardim vertical finalizado pela DaTerra" loading="lazy"></div>
+    </div>
+  </section>
+  <section class="sec areia">
+    <div class="wrap">
+      <div class="cab-s"><div><span class="rot">Propósito</span><h2>O que orienta o nosso trabalho.</h2></div></div>
+      <div class="cols3">
+        <div><h3>Propósito</h3><p>Criar e conservar áreas verdes que melhorem a experiência de quem vive, trabalha ou se hospeda em cada espaço.</p></div>
+        <div><h3>Base técnica</h3><p>Escolha de espécies, preparo do solo e cuidados definidos a partir das condições reais do local.</p></div>
+        <div><h3>Cuidado contínuo</h3><p>Acompanhamento depois da entrega para que o jardim se desenvolva como foi planejado.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="cab-s"><div><span class="rot">Equipe</span><h2>Responsáveis técnicos.</h2></div><div><p class="lead">A direção da DaTerra está a cargo de dois engenheiros agrônomos, com apoio de uma equipe de campo.</p></div></div>
+      <div class="equipe-foto">
+        <figure><div class="foto rv-img"><img data-src="ig-equipe" data-sizes="(max-width:980px) 100vw, 40vw" alt="Equipe da DaTerra em visita técnica a um jardim com piscina" loading="lazy"></div><figcaption>Visita técnica a projeto em Serrambi (PE).</figcaption></figure>
+        <div class="equipe">
+          <article class="pessoa"><h3>Anderson</h3><p><b>Engenheiro agrônomo · sócio</b>Descrição da atuação e registro profissional a confirmar com a DaTerra.</p></article>
+          <article class="pessoa"><h3>Wallyson</h3><p><b>Engenheiro agrônomo · sócio</b>Descrição da atuação e registro profissional a confirmar com a DaTerra.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="cab-s"><div><span class="rot">Método</span><h2>Como trabalhamos.</h2></div></div>
+      <div class="metodo">
+        <div><span class="n">01</span><b>Entender</b><p>Conversa sobre o uso do espaço, o público e o investimento previsto.</p></div>
+        <div><span class="n">02</span><b>Avaliar</b><p>Visita técnica para leitura do terreno e das condições existentes.</p></div>
+        <div><span class="n">03</span><b>Propor</b><p>Projeto ou plano de trabalho com escopo e etapas claras.</p></div>
+        <div><span class="n">04</span><b>Executar e cuidar</b><p>Implantação e, quando contratada, manutenção contínua.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec areia">
+    <div class="wrap g12 duo">
+      <div class="txt"><span class="rot">Estrutura</span><h2>Sede, loja e viveiro.</h2><p class="lead">Estrutura física de apoio aos projetos e ao atendimento da loja. Fotos e detalhes serão incluídos após o envio do material pela DaTerra.</p><div><a class="btn contorno" href="#loja">Conhecer a loja</a></div></div>
+      <div class="img foto arco rv-img"><img data-src="ig-jiboia" data-sizes="(max-width:980px) 100vw, 40vw" alt="Jiboia em vaso da loja DaTerra" loading="lazy"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= SERVIÇOS ================= -->
+<div class="pagina" data-p="servicos" hidden>
+  <section class="hero pg" aria-labelledby="h-sv">
+    <div class="wrap g12">
+      <div class="txt"><nav class="migalha" aria-label="Você está em"><a href="#inicio">Início</a><span aria-hidden="true">/</span><span>Serviços</span></nav><h1 id="h-sv">Soluções para criar, renovar e conservar áreas verdes.</h1><p class="sub">Do primeiro estudo à manutenção contínua, com a mesma equipe técnica.</p></div>
+      <div class="img foto arco"><img data-src="ig-ws-1" data-sizes="(max-width:980px) 100vw, 40vw" alt="Jardim tropical com piscina em Serrambi"></div>
+    </div>
+  </section>
+  <section class="sec"><div class="wrap serv-l" id="servL"></div></section>
+</div>
+
+<!-- ================= SERVIÇO ================= -->
+<div class="pagina" data-p="servico" hidden>
+  <section class="hero pg" aria-labelledby="sv-tit">
+    <div class="wrap g12">
+      <div class="txt"><nav class="migalha" aria-label="Você está em"><a href="#inicio">Início</a><span aria-hidden="true">/</span><a href="#servicos">Serviços</a><span aria-hidden="true">/</span><span id="sv-mig"></span></nav><h1 id="sv-tit"></h1><p class="sub" id="sv-sub"></p><div class="ctas"><a class="btn" href="#contato" data-ctx>Solicitar orçamento</a></div></div>
+      <div class="img foto arco"><img id="sv-img" alt=""><span class="ilus" id="svIlus" hidden>Imagem 3D</span></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap g12" style="row-gap:36px;align-items:start">
+      <div style="grid-column:1/6;display:grid;gap:20px" class="sv-a"><span class="rot">Sobre o serviço</span><h2 id="sv-h2"></h2><p class="lead" id="sv-intro"></p><div style="display:grid;gap:8px"><b style="font-weight:600;font-size:14.5px">Indicado para</b><div class="tags" id="sv-para"></div></div></div>
+      <div style="grid-column:7/13" class="sv-b"><span class="rot" style="margin-bottom:14px">O que inclui</span><div class="dl" id="sv-inclui"></div></div>
+    </div>
+  </section>
+  <section class="sec areia">
+    <div class="wrap"><div class="cab-s"><div><span class="rot">Como funciona</span><h2>Etapas do atendimento.</h2></div></div><div class="proc" data-proc id="sv-etapas"></div></div>
+  </section>
+  <section class="sec">
+    <div class="wrap g12" style="row-gap:28px;align-items:start">
+      <div style="grid-column:1/6;display:grid;gap:18px" class="sv-a"><span class="rot">Outros serviços</span><h2>Conheça também.</h2><div><a class="btn" href="#contato" data-ctx>Solicitar orçamento</a></div></div>
+      <nav style="grid-column:7/13" class="outros sv-b" id="sv-outros" aria-label="Outros serviços"></nav>
+    </div>
+  </section>
+</div>
+
+<!-- ================= SOLUÇÕES ================= -->
+<div class="pagina" data-p="solucoes-empreendimentos" hidden>
+  <section class="hero pg" aria-labelledby="h-sol">
+    <div class="wrap g12">
+      <div class="txt"><nav class="migalha" aria-label="Você está em"><a href="#inicio">Início</a><span aria-hidden="true">/</span><span>Soluções para empreendimentos</span></nav><h1 id="h-sol">Paisagismo pensado para cada tipo de negócio.</h1><p class="sub">Condomínios, hotéis, empresas, construtoras e escritórios de arquitetura têm desafios diferentes. O atendimento parte deles.</p></div>
+      <div class="img foto arco"><img data-src="ig-lp-depois" data-sizes="(max-width:980px) 100vw, 40vw" alt="Áreas comuns do condomínio Beach Class Muro Alto"></div>
+    </div>
+  </section>
+  <section class="sec"><div class="wrap sol" id="solL"></div></section>
+</div>
+
+<!-- ================= PROJETOS ================= -->
+<div class="pagina" data-p="projetos" hidden>
+  <section class="hero pg" aria-labelledby="h-pj">
+    <div class="wrap g12">
+      <div class="txt"><nav class="migalha" aria-label="Você está em"><a href="#inicio">Início</a><span aria-hidden="true">/</span><span>Projetos</span></nav><h1 id="h-pj">Projetos de paisagismo e jardins.</h1><p class="sub">Trabalhos residenciais, corporativos, em condomínios e na hotelaria.</p></div>
+      <div class="img foto arco"><img data-src="ig-ws-3" data-sizes="(max-width:980px) 100vw, 40vw" alt="Canteiro tropical com helicônias em Serrambi"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar projetos por serviço"></div>
+      <div class="galeria" id="galeria"></div>
+      <p class="nota">Fotos e imagens 3D publicadas pela DaTerra no Instagram. Locais marcados como "a confirmar" e a autorização de uso das imagens devem ser validados com a empresa antes da publicação.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ================= LOJA ================= -->
+<div class="pagina" data-p="loja" hidden>
+  <section class="hero pg" aria-labelledby="h-lj">
+    <div class="wrap g12">
+      <div class="txt"><nav class="migalha" aria-label="Você está em"><a href="#inicio">Início</a><span aria-hidden="true">/</span><span>Nossa Loja</span></nav><h1 id="h-lj">Loja de plantas, flores e jardinagem.</h1><p class="sub">Plantas ornamentais, mudas, adubos, vasos e acessórios, com atendimento de quem trabalha com jardins.</p><div class="ctas"><a class="btn" data-wpp="loja" href="https://bit.ly/Falecomadaterra" target="_blank" rel="noopener">Falar com a loja</a><a class="btn contorno" href="https://www.google.com/maps/search/?api=1&query=DaTerra+Paisagismo+Rua+do+Machado+Recife" target="_blank" rel="noopener">Como chegar</a></div></div>
+      <div class="img foto arco"><img data-src="ig-peperomia" data-sizes="(max-width:980px) 100vw, 40vw" alt="Peperômia em vaso suspenso da loja DaTerra"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="cab-s"><div><span class="rot">Categorias</span><h2>O que você encontra.</h2></div><div><p class="lead">Categorias sugeridas, a confirmar com a loja. Disponibilidade e valores podem variar.</p></div></div>
+      <div class="vitrine" id="vitrine"></div>
+    </div>
+  </section>
+  <section class="sec areia">
+    <div class="wrap info3">
+      <div><b>Endereço</b><p>R. do Machado, 0001<br>Arruda, Recife · PE</p><a class="link" href="https://www.google.com/maps/search/?api=1&query=DaTerra+Paisagismo+Rua+do+Machado+Recife" target="_blank" rel="noopener">Traçar rota</a></div>
+      <div><b>Horário</b><p class="pend">A confirmar</p></div>
+      <div><b>Atendimento</b><p>Orientação sobre plantio, adubação e cuidados.</p><a class="link" data-wpp="loja" href="https://bit.ly/Falecomadaterra" target="_blank" rel="noopener">Abrir WhatsApp</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONTATO ================= -->
+<div class="pagina" data-p="contato" hidden>
+  <section class="sec" style="padding-top:clamp(36px,5vw,64px)">
+    <div class="wrap">
+      <div class="cab-s"><div><nav class="migalha" aria-label="Você está em"><a href="#inicio">Início</a><span aria-hidden="true">/</span><span>Contato</span></nav><h1>Solicite um orçamento de paisagismo.</h1></div><div><p class="lead">Leva cerca de dois minutos. As respostas ajudam a equipe a preparar a visita técnica.</p></div></div>
+      <div class="g12 contato-g">
+        <div class="frm" data-form="completo"></div>
+        <aside class="lado"><span class="rot">Fale com a DaTerra</span><div class="contatos" data-contatos></div><a class="link" href="https://www.google.com/maps/search/?api=1&query=DaTerra+Paisagismo+Rua+do+Machado+Recife" target="_blank" rel="noopener">Abrir no Google Maps <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></aside>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PRIVACIDADE ================= -->
+<div class="pagina" data-p="privacidade" hidden>
+  <section class="sec" style="padding-top:clamp(36px,5vw,64px)"><div class="wrap texto-legal">
+    <nav class="migalha" aria-label="Você está em"><a href="#inicio">Início</a><span aria-hidden="true">/</span><span>Política de privacidade</span></nav>
+    <h1>Política de privacidade</h1>
+    <p class="nota" style="margin-top:0">Texto-base para o protótipo. A versão final deve ser revisada pela DaTerra e por assessoria jurídica, conforme a LGPD.</p>
+    <h3>Dados coletados</h3><p>Ao solicitar um orçamento, coletamos nome, empresa ou condomínio, WhatsApp, e-mail, tipo de empreendimento, serviço de interesse, localização, área aproximada e a mensagem enviada.</p>
+    <h3>Finalidade</h3><p>Os dados são usados exclusivamente para retornar o contato, preparar propostas e acompanhar o atendimento comercial.</p>
+    <h3>Compartilhamento</h3><p>Não vendemos nem compartilhamos dados pessoais com terceiros para fins de marketing.</p>
+    <h3>Seus direitos</h3><p>Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento pelos nossos canais de contato.</p>
+  </div></section>
+</div>
+</main>
+
+<footer class="rodape">
+  <div class="wrap g12">
+    <div class="m"><a class="marca" href="#inicio"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--salvia)"><path d="M23 43c0-9 1-17 5-25"/><path d="M27 20C26 10 33 4 44 3c1 11-6 18-17 17z"/><path d="M27 20c4-5 9-9 14-13"/><path d="M23 30C21 21 14 17 4 18c0 10 7 14 19 12z"/><path d="M22 29c-4-4-9-7-14-8"/></svg><span class="nm"><b>DaTerra</b><small>PAISAGISMO</small></span></a><p>Paisagismo com responsabilidade agronômica em Recife. Projetos, implantação, manutenção e loja de plantas.</p></div>
+    <div class="c"><h4>Navegação</h4><ul><li><a href="#a-daterra">A DaTerra</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#loja">Nossa Loja</a></li><li><a href="#contato">Contato</a></li></ul></div>
+    <div class="c"><h4>Serviços</h4><ul id="rodServ"></ul></div>
+    <div class="c"><h4>Contato</h4><ul><li>R. do Machado, 0001<br>Arruda, Recife · PE</li><li><span class="pend">Telefone a confirmar</span></li><li><span class="pend">E-mail a confirmar</span></li><li><span class="pend">Horário a confirmar</span></li><li><a href="https://www.instagram.com/daterrapaisagismo/" target="_blank" rel="noopener">Instagram @daterrapaisagismo</a></li></ul></div>
+  </div>
+  <div class="wrap base"><span>© 2026 DaTerra Paisagismo · <span class="pend">CNPJ a confirmar</span></span><a href="#privacidade">Política de privacidade</a></div>
+</footer>
+
+<a class="wpp" id="wppFlut" href="https://bit.ly/Falecomadaterra" target="_blank" rel="noopener" aria-label="Falar com a DaTerra pelo WhatsApp"></a>
+<div class="barra-m fora" id="barraM"><a class="btn" href="#contato">Solicitar orçamento</a><a class="btn wz" id="barraWz" href="https://bit.ly/Falecomadaterra" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp"></a></div>
+
+<div class="modal-veu" id="modalVeu" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTit" id="modal">
+    <div class="gal"><img id="mImg" alt=""><span class="ilus" id="mIlus" style="top:12px;bottom:auto">Imagem 3D</span><div class="setas"><button type="button" id="mAnt" aria-label="Imagem anterior"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8H2M7 3L2 8l5 5"/></svg></button><span id="mPos"></span><button type="button" id="mProx" aria-label="Próxima imagem"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button></div></div>
+    <div class="t"><button class="fecha" type="button" id="mFecha">Fechar</button><span class="rot" id="mTag"></span><h3 id="mTit" style="font-family:var(--display);font-size:clamp(28px,3vw,36px);color:var(--floresta)"></h3><div class="ficha" id="mFicha"></div><a class="btn" href="#contato" id="mCta">Quero um projeto assim</a></div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"DaTerra Paisagismo","description":"Paisagismo e soluções para áreas verdes: projetos, implantação, manutenção, consultorias e loja de plantas.","address":{"@type":"PostalAddress","streetAddress":"Rua do Machado, 0001 - Arruda","addressLocality":"Recife","addressRegion":"PE","addressCountry":"BR"},"sameAs":["https://www.instagram.com/daterrapaisagismo/"]}
+</script>
+<script>
+(()=>{
+const reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const seta='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg>';
+const setaD='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12L12 4M5 4h7v7"/></svg>';
+const WZ='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.6-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>';
+$('#wppFlut').innerHTML=WZ;$('#barraWz').innerHTML=WZ;
+const I={tel:'<path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/>',mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',pin:'<path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>',insta:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/>',wpp:'<path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/>'};
+const ic=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[k]}</svg>`;
+
+/* Imagens responsivas (WebP 800/1600) */
+const src=n=>`img/${n}-1600.webp`;
+const srcset=n=>`img/${n}-800.webp 800w, img/${n}-1600.webp 1600w`;
+const pic=(n,alt,sz='(max-width:640px) 100vw, 50vw',lazy=true)=>`<img src="${src(n)}" srcset="${srcset(n)}" sizes="${sz}" alt="${alt}"${lazy?' loading="lazy" decoding="async"':''}>`;
+function imgs(root=document){root.querySelectorAll('img[data-src]').forEach(im=>{const n=im.dataset.src;im.srcset=srcset(n);im.sizes=im.dataset.sizes||'100vw';im.src=src(n);im.removeAttribute('data-src')})}
+
+/* Configuração: com o número preenchido (ex.: '5581900000000'), o WhatsApp abre com mensagem pré-preenchida */
+const CONFIG={whatsapp:'',link:'https://bit.ly/Falecomadaterra'};
+const wa=msg=>CONFIG.whatsapp?`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`:CONFIG.link;
+
+/* ============ conteúdo ============ */
+const SERV=[
+ {id:'projetos-paisagisticos',nome:'Projetos paisagísticos',img:'ig-projeto3d',
+  resumo:'Estudo, conceito e planejamento da área verde, com especificação de espécies e documentação para execução.',
+  h2:'Planejar antes de plantar.',intro:'O projeto organiza o espaço a partir do uso previsto, das condições do terreno e do orçamento disponível. O resultado é uma proposta clara para aprovação e um material técnico para orientar a implantação.',
+  inclui:[['Levantamento','Visita ao local e leitura das condições existentes.'],['Conceito','Setorização, referências e proposta inicial para aprovação.'],['Especificação','Escolha de espécies e materiais adequados ao clima e ao uso.'],['Documentação','Plantas e informações para orçamento e execução.']],
+  etapas:[['Conversa inicial','Objetivos, uso do espaço e investimento.'],['Visita técnica','Leitura do terreno e do que já existe.'],['Desenvolvimento','Proposta, ajustes e versão final.'],['Entrega','Apresentação e orientação para a implantação.']],
+  para:['Construtoras','Incorporadoras','Hotéis','Condomínios','Arquitetos','Residências'],form:'Projeto'},
+ {id:'implantacao',nome:'Implantação de jardins',img:'ig-implantacao',
+  resumo:'Preparação do terreno, plantio e finalização do jardim conforme o projeto aprovado.',
+  h2:'Do projeto ao jardim pronto.',intro:'Executamos o projeto aprovado com equipe própria, cuidando do preparo do solo, do plantio e dos acabamentos. A implantação pode partir de um projeto da DaTerra ou de um escritório parceiro.',
+  inclui:[['Preparação','Limpeza, preparo e correção do solo.'],['Plantio','Árvores, arbustos, forrações e gramados.'],['Finalização','Acabamentos, coberturas e limpeza da área.'],['Orientação','Recomendações para os primeiros cuidados.']],
+  etapas:[['Planejamento','Cronograma, insumos e logística.'],['Preparo','Limpeza e preparo do terreno.'],['Execução','Plantio conforme o projeto.'],['Entrega','Vistoria final e orientações.']],
+  para:['Construtoras','Condomínios','Hotéis','Empresas','Arquitetos','Residências'],form:'Implantação'},
+ {id:'manutencao',nome:'Manutenção de jardins',img:'ig-manutencao',
+  resumo:'Conservação periódica para manter o jardim saudável e bem apresentado.',
+  h2:'Cuidado contínuo, jardim em ordem.',intro:'A manutenção é definida após a avaliação da área, considerando tamanho, espécies e uso do espaço. Escopo e periodicidade são combinados em proposta, de acordo com cada empreendimento.',
+  inclui:[['Poda e limpeza','Condução das plantas e retirada de material seco.'],['Nutrição','Adubação de acordo com a necessidade das plantas.'],['Sanidade','Observação e controle de pragas e doenças.'],['Acompanhamento','Orientação sobre o estado do jardim.']],
+  etapas:[['Contato','Formulário ou WhatsApp.'],['Visita técnica','Avaliação da área e do jardim.'],['Proposta','Escopo e periodicidade sob medida.'],['Início','Rotina de cuidados com a equipe.']],
+  para:['Condomínios','Administradoras','Hotéis','Empresas','Comércios'],form:'Manutenção'},
+ {id:'revitalizacao',nome:'Revitalização de áreas verdes',img:'ig-revitalizacao',
+  resumo:'Diagnóstico e renovação de jardins existentes, aproveitando o que está saudável.',
+  h2:'Novo fôlego para jardins existentes.',intro:'Avaliamos o jardim atual para entender o que pode ser recuperado, o que precisa ser substituído e como redesenhar os espaços para valorizar o empreendimento.',
+  inclui:[['Diagnóstico','Avaliação de solo, plantas e problemas recorrentes.'],['Recuperação','Correção do solo e recuperação de áreas.'],['Renovação','Substituição de espécies e novo desenho quando necessário.'],['Continuidade','Plano de cuidados para manter o resultado.']],
+  etapas:[['Diagnóstico','Vistoria do jardim existente.'],['Proposta','Prioridades e plano de renovação.'],['Execução','Recuperação e replantio.'],['Cuidados','Manutenção para consolidar o resultado.']],
+  para:['Condomínios','Hotéis','Empresas','Restaurantes','Residências'],form:'Revitalização'}
+];
+const SEG=[
+ {k:'condominio',n:'Condomínios e administradoras',d:'Jardins de áreas comuns perdem aparência rápido sem uma rotina definida, e a gestão disso pesa sobre síndicos e administradoras.',s:'Implantação, revitalização e contratos de manutenção com escopo claro e acompanhamento técnico.',cta:'Solicitar visita técnica',serv:'manutencao',tipo:'Condomínio'},
+ {k:'hotel',n:'Hotéis, pousadas e resorts',d:'O jardim faz parte da experiência do hóspede e aparece em fotos, avaliações e redes sociais.',s:'Projetos que reforçam a identidade do hotel e manutenção para manter o padrão em todas as estações.',cta:'Solicitar proposta',serv:'projetos-paisagisticos',tipo:'Hotel'},
+ {k:'empresa',n:'Empresas e comércio',d:'Fachadas e áreas de convivência transmitem a imagem da empresa antes de qualquer conversa.',s:'Paisagismo corporativo, do projeto à manutenção, adequado à rotina do negócio.',cta:'Solicitar orçamento',serv:'projetos-paisagisticos',tipo:'Empresa'},
+ {k:'construtora',n:'Construtoras e incorporadoras',d:'O paisagismo das áreas comuns precisa estar pronto na entrega e alinhado ao padrão do lançamento.',s:'Projeto e implantação integrados ao cronograma, com espécies adequadas ao uso e à manutenção futura.',cta:'Falar com a equipe',serv:'implantacao',tipo:'Construtora'},
+ {k:'arquiteto',n:'Arquitetos e profissionais',d:'Projetos de arquitetura precisam de um parceiro que execute o paisagismo com fidelidade e cuidado técnico.',s:'Apoio na especificação de espécies, implantação do projeto e manutenção posterior.',cta:'Conversar com a equipe',serv:'implantacao',tipo:'Outro'}
+];
+const PROJ=[
+ {n:'Jardim tropical em Serrambi',tipo:'Residencial',local:'Serrambi · PE',reg:'Fotos da obra',imgs:['ig-ws-1','ig-ws-2','ig-ws-3','ig-ws-4'],txt:'Jardim tropical residencial integrado à área da piscina, com helicônias, alpínias e folhagens de grande porte.'},
+ {n:'Projeto AS',tipo:'Residencial',local:'A confirmar',reg:'Fotos da obra',imgs:['ig-as-1','ig-as-2','ig-as-3','ig-as-4'],txt:'Jardim residencial com gramado amplo, bromélias, jardim vertical na fachada e área de convivência ao ar livre.'},
+ {n:'Jardim vertical',tipo:'Jardim vertical',local:'A confirmar',reg:'Montagem e resultado',imgs:['ig-jv-1','ig-jv-2','ig-jv-3','ig-implantacao'],txt:'Montagem de jardim vertical em parceria com a @laplantajardim, do desenho feito à mão à parede finalizada.'},
+ {n:'Beach Class Muro Alto',tipo:'Condomínio',local:'Muro Alto · PE',reg:'Antes e depois',imgs:['ig-lp-depois','ig-lp-antes'],txt:'Paisagismo das áreas comuns de condomínio, registrado pela DaTerra em antes e depois.'},
+ {n:'Projeto GV',tipo:'Projeto em 3D',local:'Aldeia · PE',reg:'Imagens 3D do projeto',imgs:['ig-gv-1','ig-projeto3d','ig-gv-2'],txt:'Projeto paisagístico residencial com deck, área de fogo, caminhos iluminados e pomar.'},
+ {n:'Projeto HT',tipo:'Projeto em 3D',local:'A confirmar',reg:'Imagem 3D do projeto',imgs:['ig-ht-1'],txt:'Projeto paisagístico residencial com palmeiras, pedras e forrações na entrada da casa.'},
+ {n:'Projeto SB',tipo:'Projeto em 3D',local:'A confirmar',reg:'Imagem 3D do projeto',imgs:['ig-sb-1'],txt:'Projeto paisagístico para área de piscina e lazer.'},
+ {n:'Projeto DC',tipo:'Residencial',local:'A confirmar',reg:'Foto da obra',imgs:['ig-dc-1'],txt:'Jardim residencial com primaveras floridas junto à área da piscina.'}
+];
+const CATS=[
+ {n:'Plantas ornamentais',d:'Folhagens e espécies tropicais para áreas internas e externas, como zamioculca, costela-de-adão e pacová.',img:'ig-zamioculca',real:1},
+ {n:'Plantas pendentes',d:'Jiboia, peperômia, samambaia e outras espécies para vasos suspensos e varandas.',img:'ig-jiboia',real:1},
+ {n:'Flores',d:'Floríferas para canteiros, vasos e composições, conforme a estação.',img:'ig-orquidea',real:1},
+ {n:'Mudas',d:'Mudas ornamentais, frutíferas e outras categorias disponíveis.',img:'mudas'},
+ {n:'Adubos e insumos',d:'Produtos para nutrição e cuidado das plantas e do solo.',img:'solo'},
+ {n:'Vasos e acessórios',d:'Materiais, estilos e tamanhos variados para cada ambiente.',img:'prateleira'}
+];
+const CONTATO=[['wpp','WhatsApp: bit.ly/Falecomadaterra','wa'],['tel','Telefone a confirmar',''],['mail','E-mail a confirmar',''],['pin','R. do Machado, 0001 · Arruda, Recife · PE','https://www.google.com/maps/search/?api=1&query=DaTerra+Paisagismo+Rua+do+Machado+Recife'],['insta','@daterrapaisagismo','https://www.instagram.com/daterrapaisagismo/']];
+
+/* ============ render ============ */
+$('#rodServ').innerHTML=SERV.map(s=>`<li><a href="#${s.id}">${s.nome}</a></li>`).join('')+'<li><a href="#solucoes-empreendimentos">Soluções para empreendimentos</a></li>';
+$('#navMob').innerHTML=`<a href="#inicio">Início</a><a href="#a-daterra">A DaTerra</a><a href="#servicos">Serviços</a>${SERV.map(s=>`<a class="s" href="#${s.id}">${s.nome}</a>`).join('')}<a href="#solucoes-empreendimentos">Empreendimentos</a><a href="#projetos">Projetos</a><a href="#loja">Nossa Loja</a><a href="#contato">Contato</a>`;
+$('#linhaEsp').innerHTML=[['projetos-paisagisticos','Projetos'],['implantacao','Implantação'],['manutencao','Manutenção'],['revitalizacao','Revitalização']].map(([h,t])=>`<a href="#${h}">${t}${seta}</a>`).join('');
+$('#listaServ').innerHTML=SERV.map((s,i)=>`<a class="item-ed${i===0?' on':''}" href="#${s.id}" data-i="${i}"><span class="mini">${pic(s.img,'','96px')}</span><h3>${s.nome}</h3><p>${s.resumo}</p><span class="ir">${seta}</span></a>`).join('');
+$('#previaServ').innerHTML=SERV.map((s,i)=>`<img src="${src(s.img)}" srcset="${srcset(s.img)}" sizes="33vw" alt="" loading="lazy" class="${i===0?'on':''}">`).join('')+'<span class="ilus" id="ilusServ">Imagem 3D</span>';
+const cardP=(p,i)=>`<button type="button" class="proj" data-proj="${i}" data-tipo="${p.tipo}"><div class="foto rv-img">${pic(p.imgs[0],p.n,'(max-width:640px) 84vw, 500px')}${p.tipo==='Projeto em 3D'?'<span class="ilus">Imagem 3D</span>':''}</div><span class="meta">${p.tipo} · ${p.local==='A confirmar'?'Pernambuco':p.local}${p.imgs.length>1?' · '+p.imgs.length+' imagens':''}</span><h3>${p.n}</h3></button>`;
+$('#faixaHome').innerHTML=PROJ.slice(0,4).map(cardP).join('')+`<a class="proj fim" href="#projetos"><h3>Ver todos os projetos.</h3><span class="link">Galeria completa ${seta}</span></a>`;
+$('#galeria').innerHTML=PROJ.map(cardP).join('');
+$('#filtros').innerHTML=['Todos','Residencial','Condomínio','Jardim vertical','Projeto em 3D'].map((t,i)=>`<button type="button" aria-pressed="${i===0}" data-f="${t}">${t==='Projeto em 3D'?'Projetos em 3D':t}</button>`).join('');
+$('#catsHome').innerHTML=CATS.map(c=>`<a href="#loja"><b>${c.n}</b><span>${c.d}</span>${seta}</a>`).join('');
+$('#vitrine').innerHTML=CATS.map(c=>`<article class="vit"><div class="foto rv-img">${pic(c.img,'','(max-width:640px) 100vw, 33vw')}${c.real?'':''}</div><h3>${c.n}</h3><p>${c.d}</p><a class="link" data-wpp="cat:${c.n}" href="https://bit.ly/Falecomadaterra" target="_blank" rel="noopener">Consultar disponibilidade ${seta}</a></article>`).join('');
+$('#servL').innerHTML=SERV.map((s,i)=>`<article class="g12 duo${i%2?' inv':''}"><div class="txt"><span class="num">${String(i+1).padStart(2,'0')}</span><h2>${s.nome}</h2><p class="lead">${s.resumo}</p><div class="tags">${s.para.map(x=>`<span>${x}</span>`).join('')}</div><div><a class="btn" href="#${s.id}">Conhecer serviço ${seta}</a></div></div><div class="img foto rv-img">${pic(s.img,'','(max-width:980px) 100vw, 40vw')}${s.img==='ig-projeto3d'?'<span class="ilus">Imagem 3D</span>':''}</div></article>`).join('');
+$('#solL').innerHTML=SEG.map(s=>`<article id="seg-${s.k}"><h3>${s.n}</h3><div class="d"><span>Desafio</span><p>${s.d}</p></div><div class="s"><span>Como ajudamos</span><p>${s.s}</p></div><div class="acoes"><a class="btn" href="#contato" data-preset="${s.tipo}">${s.cta} ${seta}</a><a class="link" href="#${s.serv}">Ver serviço relacionado ${seta}</a></div></article>`).join('');
+$$('[data-contatos]').forEach(el=>el.innerHTML=CONTATO.map(([k,t,h])=>`<div>${ic(k)}${h==='wa'?`<a href="${wa('Olá, DaTerra! Gostaria de mais informações.')}" target="_blank" rel="noopener">${t}</a>`:h?`<a href="${h}" target="_blank" rel="noopener">${t}</a>`:`<span class="pend">${t}</span>`}</div>`).join(''));
+imgs();
+
+/* serviços: prévia ao passar/focar */
+const prev=[...$('#previaServ').querySelectorAll('img')];
+$$('#listaServ .item-ed').forEach(a=>{const ativa=()=>{$$('#listaServ .item-ed').forEach(x=>x.classList.toggle('on',x===a));prev.forEach((im,i)=>im.classList.toggle('on',i==a.dataset.i));$('#ilusServ').hidden=a.dataset.i!=='0'};a.addEventListener('mouseenter',ativa);a.addEventListener('focus',ativa)});
+
+/* segmentos: abas */
+const abas=$('#abasSeg'),painel=$('#painelSeg');
+abas.innerHTML=SEG.map((s,i)=>`<button type="button" role="tab" id="tab-${s.k}" aria-controls="painelSeg" aria-selected="${i===0}" tabindex="${i===0?0:-1}" data-i="${i}">${s.n}${seta}</button>`).join('');
+function seg(i,foco){const s=SEG[i];$$('#abasSeg [role=tab]').forEach((b,j)=>{b.setAttribute('aria-selected',j===i);b.tabIndex=j===i?0:-1});
+  painel.setAttribute('aria-labelledby','tab-'+s.k);
+  painel.innerHTML=`<h3>${s.n}</h3><div class="pb"><div><span>Desafio</span><p>${s.d}</p></div><div><span>Como ajudamos</span><p>${s.s}</p></div></div><div class="acoes"><a class="btn claro" href="#contato" data-preset="${s.tipo}">${s.cta} ${seta}</a><a class="link" href="#solucoes-empreendimentos">Ver todos os segmentos</a></div>`;
+  if(!reduz){painel.removeAttribute('data-anim');void painel.offsetWidth;painel.setAttribute('data-anim','')}
+  if(foco)$('#tab-'+s.k).focus()}
+abas.addEventListener('click',e=>{const b=e.target.closest('[role=tab]');if(b)seg(+b.dataset.i)});
+abas.addEventListener('keydown',e=>{const i=+document.activeElement.dataset.i;if(e.key==='ArrowRight'||e.key==='ArrowDown'){e.preventDefault();seg((i+1)%SEG.length,true)}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();seg((i-1+SEG.length)%SEG.length,true)}});
+seg(0);
+
+/* ============ formulário ============ */
+const TIPOS=['Condomínio','Hotel ou pousada','Empresa','Construtora','Residência','Outro'];
+const SERVF=['Projeto','Implantação','Manutenção','Revitalização','Outro'];
+const AREAS=['Até 200 m²','200 a 1.000 m²','1.000 a 5.000 m²','Acima de 5.000 m²','Não sei informar'];
+let origem='Início';
+const chips=(px,nm,arr)=>arr.map((t,i)=>`<input type="radio" name="${px}-${nm}" id="${px}-${nm}${i}" value="${t}"><label for="${px}-${nm}${i}">${t}</label>`).join('');
+function montaForm(box,modo){
+  const px=modo==='curto'?'fc':'fl',longo=modo!=='curto';
+  const e1=`<fieldset class="campo"><legend>Tipo de empreendimento <i class="req">*</i></legend><div class="chips">${chips(px,'tipo',TIPOS)}</div></fieldset>
+    <fieldset class="campo"><legend>Serviço desejado <i class="req">*</i></legend><div class="chips">${chips(px,'serv',SERVF)}</div></fieldset>
+    <fieldset class="campo cond" data-cond hidden><legend data-cond-t></legend><div class="chips" data-cond-c></div></fieldset>
+    <label class="campo" for="${px}-local"><span>Cidade e bairro <i class="req">*</i></span><input id="${px}-local" autocomplete="address-level2" placeholder="Ex.: Boa Viagem, Recife"></label>`;
+  const e2=`<fieldset class="campo"><legend>Área aproximada</legend><div class="chips">${chips(px,'area',AREAS)}</div></fieldset>
+    <label class="campo" for="${px}-msg"><span>Mensagem</span><textarea id="${px}-msg" placeholder="O que existe hoje, o que você espera e prazos, se houver."></textarea></label>`;
+  const e3=`<div class="duas"><label class="campo" for="${px}-nome"><span>Nome <i class="req">*</i></span><input id="${px}-nome" autocomplete="name"></label><label class="campo" for="${px}-emp"><span>Empresa ou condomínio</span><input id="${px}-emp" autocomplete="organization"></label></div>
+    <div class="duas"><label class="campo" for="${px}-tel"><span>WhatsApp com DDD <i class="req">*</i></span><input id="${px}-tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(81) 90000-0000"></label><label class="campo" for="${px}-mail"><span>E-mail</span><input id="${px}-mail" type="email" autocomplete="email"></label></div>
+    <p class="lgpd">Usamos seus dados apenas para retornar o contato, conforme a <a href="#privacidade">Política de privacidade</a>.</p>`;
+  box.innerHTML=`<form class="form" novalidate aria-label="Solicitação de orçamento">
+    ${longo?`<div class="passos-f" aria-hidden="true"><div class="atual"><i></i>Empreendimento</div><div><i></i>Detalhes</div><div><i></i>Contato</div></div>`:`<h3>Solicitar orçamento</h3>`}
+    <div class="etapa-f" data-e="0">${longo?'<h3>Sobre o seu espaço</h3>':''}${e1}${longo?'':e3}</div>
+    ${longo?`<div class="etapa-f" data-e="1" hidden><h3>Mais detalhes</h3>${e2}</div><div class="etapa-f" data-e="2" hidden><h3>Seus dados</h3>${e3}</div>`:''}
+    <div class="resumo" data-res hidden tabindex="-1"><h3>Solicitação pronta</h3><p style="color:var(--tinta-2);font-size:15px">Envie a mensagem pelo WhatsApp da DaTerra. Neste protótipo o formulário ainda não está conectado ao e-mail ou ao CRM.</p><pre data-txt></pre><div class="acts"><a class="btn" data-envia href="https://bit.ly/Falecomadaterra" target="_blank" rel="noopener">Abrir WhatsApp</a><button class="btn contorno" type="button" data-copiar>Copiar mensagem</button></div><button type="button" class="volta" data-recomeca style="justify-self:start;padding:0">Editar respostas</button></div>
+    <p class="erro" role="alert" hidden></p>
+    <div class="nav-f">${longo?'<button type="button" class="volta" data-volta hidden>← Voltar</button>':`<a class="link" href="#contato">Formulário completo ${seta}</a>`}<button type="submit" class="btn" style="margin-left:auto">${longo?'Continuar':'Enviar solicitação'} ${seta}</button></div>
+  </form>`;
+  const f=box.querySelector('form'),$f=s=>f.querySelector(s),er=$f('.erro'),et=[...f.querySelectorAll('.etapa-f')],res=$f('[data-res]'),nav=$f('.nav-f'),sub=nav.querySelector('[type=submit]'),vt=$f('[data-volta]'),pf=[...f.querySelectorAll('.passos-f div')];
+  const val=n=>{const x=f.querySelector(`[name="${px}-${n}"]:checked`);return x?x.value:''};
+  const cond=$f('[data-cond]'),ct=$f('[data-cond-t]'),cc=$f('[data-cond-c]');
+  const atualizaCond=()=>{const s=val('serv'),t=val('tipo');let q=null,op=null;
+    if(s==='Manutenção'){q='O jardim já está implantado?';op=['Sim','Não','Parcialmente']}
+    else if((s==='Projeto'||s==='Implantação')&&t==='Construtora'){q='Em que fase está a obra?';op=['Lançamento','Em obra','Próximo da entrega']}
+    if(!q){cond.hidden=true;cc.innerHTML='';cond.dataset.q='';return}
+    if(cond.dataset.q===q)return;cond.dataset.q=q;ct.textContent=q;cc.innerHTML=chips(px,'c',op);cond.hidden=false};
+  f.addEventListener('change',ev=>{if(ev.target.name===`${px}-serv`||ev.target.name===`${px}-tipo`)atualizaCond()});
+  let e=0,feito=false;
+  const vai=n=>{e=n;feito=false;et.forEach((x,i)=>x.hidden=i!==e);res.hidden=true;nav.hidden=false;pf.forEach((p,i)=>{p.classList.toggle('feito',i<e);p.classList.toggle('atual',i===e)});if(vt)vt.hidden=e===0;if(longo)sub.innerHTML=(e===2?'Gerar solicitação ':'Continuar ')+seta;er.hidden=true};
+  const fim=()=>{feito=true;et.forEach(x=>x.hidden=true);res.hidden=false;nav.hidden=true;er.hidden=true;pf.forEach(p=>{p.classList.add('feito');p.classList.remove('atual')});res.focus()};
+  const falha=(m,el)=>{er.textContent=m;er.hidden=false;if(el){el.setAttribute('aria-invalid','true');el.focus()}};
+  if(vt)vt.onclick=()=>vai(e-1);$f('[data-recomeca]').onclick=()=>vai(0);
+  f.addEventListener('input',ev=>ev.target.removeAttribute('aria-invalid'));
+  const ok1=()=>{if(!val('tipo'))return falha('Selecione o tipo de empreendimento.'),false;if(!val('serv'))return falha('Selecione o serviço desejado.'),false;const l=$f(`#${px}-local`);if(!l.value.trim())return falha('Informe a cidade e o bairro.',l),false;return true};
+  const ok3=()=>{const n=$f(`#${px}-nome`),t=$f(`#${px}-tel`),m=$f(`#${px}-mail`);if(!n.value.trim())return falha('Informe seu nome.',n),false;if(t.value.replace(/\D/g,'').length<10)return falha('Informe um WhatsApp com DDD.',t),false;if(m.value.trim()&&!/^\S+@\S+\.\S+$/.test(m.value.trim()))return falha('Confira o e-mail informado.',m),false;return true};
+  const gera=()=>{const g=id=>{const x=$f(`#${px}-${id}`);return x?x.value.trim():''};let t=`Olá, DaTerra! Gostaria de solicitar um orçamento.\n\nNome: ${g('nome')}`;if(g('emp'))t+=`\nEmpresa/condomínio: ${g('emp')}`;t+=`\nWhatsApp: ${g('tel')}`;if(g('mail'))t+=`\nE-mail: ${g('mail')}`;t+=`\nTipo de empreendimento: ${val('tipo')}\nServiço: ${val('serv')}`;if(val('c'))t+=`\n${ct.textContent} ${val('c')}`;t+=`\nLocal: ${g('local')}`;if(val('area'))t+=`\nÁrea aproximada: ${val('area')}`;if(g('msg'))t+=`\n\n${g('msg')}`;t+=`\n\n(Origem: ${origem})`;$f('[data-txt]').textContent=t;$f('[data-envia]').href=wa(t);fim()};
+  f.addEventListener('submit',ev=>{ev.preventDefault();if(!longo){if(ok1()&&ok3())gera();return}if(e===0){if(ok1())vai(1)}else if(e===1)vai(2);else if(e===2&&ok3())gera()});
+  $f('[data-copiar]').onclick=ev=>{const b=ev.currentTarget,tx=$f('[data-txt]');navigator.clipboard.writeText(tx.textContent).then(()=>{b.textContent='Mensagem copiada';setTimeout(()=>b.textContent='Copiar mensagem',2200)}).catch(()=>{const s=getSelection(),r=document.createRange();r.selectNodeContents(tx);s.removeAllRanges();s.addRange(r);b.textContent='Texto selecionado, use Ctrl+C'})};
+  f.preset=(tipo,serv)=>{if(feito)vai(0);if(tipo){const x=[...f.querySelectorAll(`[name="${px}-tipo"]`)].find(i=>i.value.startsWith(tipo));if(x)x.checked=true}if(serv){const y=[...f.querySelectorAll(`[name="${px}-serv"]`)].find(i=>i.value===serv);if(y)y.checked=true}atualizaCond();if(e!==0)vai(0)};
+}
+$$('[data-form]').forEach(b=>montaForm(b,b.dataset.form));
+let presetPend=null;
+document.addEventListener('click',ev=>{const a=ev.target.closest('[data-preset]');if(a)presetPend=[a.dataset.preset,null];
+  const c=ev.target.closest('[data-ctx]');if(c){const s=SERV.find(x=>x.id===location.hash.slice(1));if(s)presetPend=[null,s.form]}},true);
+
+/* WhatsApp contextual */
+function wppCtx(){const h=location.hash.slice(1)||'inicio';const s=SERV.find(x=>x.id===h);const msg=s?`Olá, DaTerra! Vim pelo site e gostaria de saber mais sobre ${s.nome.toLowerCase()}.`:h==='loja'?'Olá, DaTerra! Gostaria de informações sobre a loja.':'Olá, DaTerra! Vim pelo site e gostaria de mais informações.';$('#wppFlut').href=wa(msg);$('#barraWz').href=wa(msg);
+  $$('[data-wpp]').forEach(a=>{const v=a.dataset.wpp;a.href=wa(v.startsWith('cat:')?`Olá, DaTerra! Gostaria de consultar a disponibilidade de ${v.slice(4).toLowerCase()}.`:'Olá, DaTerra! Gostaria de informações sobre a loja.')})}
+
+/* ============ lightbox com foco preso ============ */
+let atual=0,lista=[],pAtual=null,volta=null;
+function mostra(){const p=pAtual,n=p.imgs[atual];const im=$('#mImg');im.srcset=srcset(n);im.sizes='(max-width:980px) 100vw, 60vw';im.src=src(n);im.alt=`${p.n}, imagem ${atual+1} de ${p.imgs.length}`;$('#mTag').textContent=p.tipo;$('#mTit').textContent=p.n;$('#mPos').textContent=`${atual+1} / ${p.imgs.length}`;
+  $('#mIlus').hidden=p.tipo!=='Projeto em 3D';$('#mAnt').hidden=$('#mProx').hidden=p.imgs.length<2;
+  $('#mFicha').innerHTML=[['Tipo',p.tipo],['Local',p.local],['Registro',p.reg],['Sobre',p.txt]].map(([a,b])=>`<div><span>${a}</span><span${b==='A confirmar'?' class="pend"':''}>${b}</span></div>`).join('')}
+function abre(btn){pAtual=PROJ[+btn.dataset.proj];atual=0;volta=btn;mostra();$('#modalVeu').hidden=false;document.body.style.overflow='hidden';$('#mFecha').focus()}
+function fecha(){if($('#modalVeu').hidden)return;$('#modalVeu').hidden=true;document.body.style.overflow='';volta&&volta.focus()}
+document.addEventListener('click',ev=>{const b=ev.target.closest('[data-proj]');if(b)abre(b)});
+$('#mFecha').onclick=fecha;$('#mCta').onclick=fecha;$('#modalVeu').onclick=ev=>{if(ev.target.id==='modalVeu')fecha()};
+$('#mAnt').onclick=()=>{const k=pAtual.imgs.length;atual=(atual-1+k)%k;mostra()};$('#mProx').onclick=()=>{const k=pAtual.imgs.length;atual=(atual+1)%k;mostra()};
+const prende=(box,ev)=>{const f=[...box.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])')].filter(x=>x.offsetParent!==null);if(!f.length)return;const a=f[0],z=f[f.length-1];if(ev.shiftKey&&document.activeElement===a){ev.preventDefault();z.focus()}else if(!ev.shiftKey&&document.activeElement===z){ev.preventDefault();a.focus()}};
+addEventListener('keydown',ev=>{const mv=!$('#modalVeu').hidden,gv=!$('#gaveta').hidden;
+  if(mv){if(ev.key==='Escape')fecha();if(ev.key==='ArrowLeft')$('#mAnt').click();if(ev.key==='ArrowRight')$('#mProx').click();if(ev.key==='Tab')prende($('#modal'),ev)}
+  else if(gv){if(ev.key==='Escape')fechaMenu();if(ev.key==='Tab')prende($('#gaveta'),ev)}});
+$('#filtros').onclick=ev=>{const b=ev.target.closest('[data-f]');if(!b)return;$$('#filtros button').forEach(x=>x.setAttribute('aria-pressed',x===b));$$('#galeria .proj').forEach(c=>c.hidden=!(b.dataset.f==='Todos'||c.dataset.tipo===b.dataset.f))};
+
+/* menu mobile */
+const gav=$('#gaveta');function fechaMenu(){if(gav.hidden)return;gav.hidden=true;$('#abreMenu').setAttribute('aria-expanded','false');document.body.style.overflow='';$('#abreMenu').focus()}
+$('#abreMenu').onclick=()=>{gav.hidden=false;$('#abreMenu').setAttribute('aria-expanded','true');document.body.style.overflow='hidden';$('#fechaMenu').focus()};$('#fechaMenu').onclick=fechaMenu;gav.addEventListener('click',ev=>{if(ev.target.closest('a')){gav.hidden=true;$('#abreMenu').setAttribute('aria-expanded','false');document.body.style.overflow=''}});
+
+/* barra de ação mobile */
+const mq=matchMedia('(max-width:640px)');const barraM=$('#barraM');const formsVis=new Set();
+const ioF=new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?formsVis.add(e.target):formsVis.delete(e.target));atualizaBarra()},{threshold:.1});
+$$('[data-form]').forEach(f=>ioF.observe(f));
+function atualizaBarra(){const p=($('.pagina:not([hidden])')||{dataset:{}}).dataset.p;const formNaTela=[...formsVis].some(f=>f.offsetParent!==null);barraM.classList.toggle('fora',formNaTela||(p==='inicio'&&scrollY<200))}
+
+/* ============ rotas + metadados ============ */
+const PAGS=['inicio','a-daterra','servicos','solucoes-empreendimentos','projetos','loja','contato','privacidade'];
+const NOME={'inicio':'Início','a-daterra':'A DaTerra','servicos':'Serviços','solucoes-empreendimentos':'Soluções para empreendimentos','projetos':'Projetos','loja':'Nossa Loja','contato':'Contato','privacidade':'Privacidade'};
+const META={
+ 'inicio':['DaTerra Paisagismo | Projetos, Implantação e Manutenção de Jardins em Recife','Paisagismo com responsabilidade agronômica em Recife para condomínios, hotéis, empresas e construtoras.'],
+ 'a-daterra':['A DaTerra | Paisagismo em Recife conduzido por engenheiros agrônomos','Conheça a DaTerra, empresa de paisagismo do Recife com projetos, implantação, manutenção e loja própria.'],
+ 'servicos':['Serviços de Paisagismo em Recife | DaTerra','Projetos paisagísticos, implantação, manutenção e revitalização de áreas verdes.'],
+ 'solucoes-empreendimentos':['Paisagismo para Condomínios, Hotéis e Empresas | DaTerra','Soluções de paisagismo para condomínios, hotéis, empresas, construtoras e arquitetos no Recife.'],
+ 'projetos':['Projetos de Paisagismo e Jardins | DaTerra','Projetos de paisagismo residenciais, corporativos, em condomínios e hotelaria.'],
+ 'loja':['Loja de Plantas, Flores e Jardinagem em Recife | DaTerra','Plantas ornamentais, mudas, adubos, vasos e acessórios com orientação técnica.'],
+ 'contato':['Solicite um Orçamento de Paisagismo | DaTerra','Conte sobre o seu espaço e solicite um orçamento de paisagismo à DaTerra.'],
+ 'privacidade':['Política de Privacidade | DaTerra','Como a DaTerra trata os dados enviados pelo site.']};
+function setMeta(t,d){document.title=t;const m=document.querySelector('meta[name="description"]');if(m)m.content=d;const ot=document.querySelector('meta[property="og:title"]');if(ot)ot.content=t;const od=document.querySelector('meta[property="og:description"]');if(od)od.content=d}
+function rota(){
+  const h=location.hash.slice(1);
+  const s=SERV.find(x=>x.id===h);const pg=s?'servico':(PAGS.includes(h)?h:'inicio');
+  if(pg!=='contato')origem=s?s.nome:NOME[pg];
+  $$('.pagina').forEach(p=>p.hidden=p.dataset.p!==pg);
+  if(s){montaServ(s);setMeta(`${s.nome} em Recife | DaTerra Paisagismo`,s.resumo)}else setMeta(...META[pg]);
+  $$('.menu [data-r]').forEach(a=>{const on=a.dataset.r===pg||(pg==='servico'&&a.dataset.r==='servicos');on?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current')});
+  wppCtx();scrollTo(0,0);
+  if(pg==='contato'&&presetPend)$('[data-form="completo"] form').preset(...presetPend);
+  presetPend=null;
+  requestAnimationFrame(()=>{prepara();quadro();atualizaBarra()});
+}
+function montaServ(s){$('#svIlus').hidden=s.img!=='ig-projeto3d';const im=$('#sv-img');im.srcset=srcset(s.img);im.sizes='(max-width:980px) 100vw, 40vw';im.src=src(s.img);$('#sv-mig').textContent=s.nome;$('#sv-tit').textContent=s.nome;$('#sv-sub').textContent=s.resumo;$('#sv-h2').textContent=s.h2;$('#sv-intro').textContent=s.intro;
+  $('#sv-para').innerHTML=s.para.map(x=>`<span>${x}</span>`).join('');
+  $('#sv-inclui').innerHTML=s.inclui.map(([a,b])=>`<div><b>${a}</b><p>${b}</p></div>`).join('');
+  $('#sv-etapas').innerHTML='<i class="lp"></i>'+s.etapas.map(([a,b],i)=>`<div class="passo"><span class="n">${i+1}</span><b>${a}</b><p>${b}</p></div>`).join('');
+  $('#sv-outros').innerHTML=SERV.filter(x=>x!==s).map(x=>`<a href="#${x.id}">${x.nome}${seta}</a>`).join('')+`<a href="#solucoes-empreendimentos">Soluções para empreendimentos${seta}</a>`}
+addEventListener('hashchange',rota);
+$('.pular').addEventListener('click',e=>{e.preventDefault();$('#conteudo').focus();$('#conteudo').scrollIntoView()});
+
+/* ============ movimento: 3 usos funcionais ============ */
+let pg,horiz,faixa,procs;
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{rootMargin:'0px 0px -8% 0px'});
+function prepara(){
+  pg=$('.pagina:not([hidden])');horiz=pg.querySelector('.horiz');faixa=horiz&&horiz.querySelector('.faixa-h');procs=[...pg.querySelectorAll('[data-proc]')];
+  pg.querySelectorAll('.rv-img:not(.in)').forEach(r=>{(reduz||r.getBoundingClientRect().top<innerHeight)?r.classList.add('in'):io.observe(r)});
+  if(horiz)horiz.style.height=innerWidth>980?(innerHeight+Math.max(0,faixa.scrollWidth-innerWidth))+'px':'auto';
+  if(reduz)procs.forEach(p=>{p.style.setProperty('--p','100%');p.querySelectorAll('.passo').forEach(x=>x.classList.add('on'))});
+}
+const cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+function quadro(){
+  $('#cabec').classList.toggle('sombra',scrollY>8);
+  if(reduz||!pg)return;
+  const vh=innerHeight;
+  if(horiz&&innerWidth>980){const r=horiz.getBoundingClientRect(),tot=r.height-vh,p=cl(-r.top/Math.max(1,tot)),d=Math.max(0,faixa.scrollWidth-innerWidth);faixa.style.transform=`translate3d(${(-p*d).toFixed(1)}px,0,0)`;$('#pgBar').style.width=(p*100)+'%';$('#pgNum').textContent='0'+Math.min(4,1+Math.floor(p*4))}
+  procs.forEach(pr=>{const r=pr.getBoundingClientRect(),p=cl((vh*.85-r.top)/(vh*.4));pr.style.setProperty('--p',(p*100)+'%');const ps=[...pr.querySelectorAll('.passo')];ps.forEach((e,i)=>e.classList.toggle('on',p>=i/(ps.length-1)-.02))});
+}
+let tk=false;addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(()=>{tk=false;quadro();atualizaBarra()})}},{passive:true});
+addEventListener('resize',()=>{prepara();quadro()});addEventListener('load',()=>{prepara();quadro()});
+rota();
+})();
+</script>
+<script>
+(function(){var l=document.getElementById('logosCli');if(!l)return;var b=l.querySelector('.pausa');b.addEventListener('click',function(){var p=l.classList.toggle('parado');b.setAttribute('aria-pressed',p);b.textContent=p?'Continuar':'Pausar'});})();
+</script>
+
+</body>
+</html>
